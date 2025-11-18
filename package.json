@@ -1,0 +1,13 @@
+{
+  "name": "responsive-project",
+  "version": "1.0.0",
+  "description": "响应式项目 - 使用 Tailwind CSS",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./static/css/tailwind.css --watch",
+    "build-css-prod": "tailwindcss -i ./src/input.css -o ./static/css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
+

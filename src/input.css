@@ -1,0 +1,79 @@
+/* Tailwind CSS 输入文件 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义组件类 */
+@layer components {
+  /* 响应式容器 */
+  .container-responsive {
+    @apply w-full mx-auto px-4;
+  }
+  
+  @media (min-width: 393px) {
+    .container-responsive {
+      max-width: 393px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container-responsive {
+      max-width: 768px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container-responsive {
+      max-width: 1024px;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    .container-responsive {
+      max-width: 1440px;
+    }
+  }
+  
+  @media (min-width: 1920px) {
+    .container-responsive {
+      max-width: 1920px;
+    }
+  }
+  
+  @media (min-width: 2560px) {
+    .container-responsive {
+      max-width: 2560px;
+    }
+  }
+
+  /* Header 样式组件 */
+  .header-glass {
+    @apply bg-[rgba(23,23,23,0.3)] backdrop-blur-[20px] border border-white/10 rounded-[1.8rem];
+  }
+
+  /* 按钮样式组件 */
+  .btn-primary {
+    @apply bg-[#1D1D1D] text-white px-5 py-[13px] rounded-lg text-center font-medium transition-all duration-300 border-none;
+  }
+
+  .btn-primary:hover {
+    @apply bg-white text-[#1D1D1D];
+  }
+}
+
+/* 自定义工具类 */
+@layer utilities {
+  /* 流体字体 */
+  .text-fluid {
+    font-size: clamp(0.875rem, 2vw, 1.5rem);
+  }
+  
+  .text-fluid-lg {
+    font-size: clamp(1.125rem, 3vw, 2.5rem);
+  }
+  
+  .text-fluid-xl {
+    font-size: clamp(1.5rem, 4vw, 4rem);
+  }
+}
+
