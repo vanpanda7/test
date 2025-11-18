@@ -31,9 +31,9 @@
   </head>
 
   <body>
-    <div class="container mx-auto">
-      <!-- Header: 使用 Tailwind CSS 重构 -->
-      <header class="fixed top-0 left-0 w-[98%] p-[1%] pb-0 pointer-events-none z-[100]">
+    <!-- Header: 使用 Tailwind CSS 重构 - 全宽显示 -->
+    <header class="fixed top-0 left-0 w-full pt-[1%] pb-0 pointer-events-none z-[100] m-0">
+      <div class="container mx-auto px-[1%]">
         <div class="header-glass flex justify-between items-center pointer-events-auto px-6 py-2 md:px-10 lg:px-12">
           <!-- Logo -->
           <div class="pointer-events-auto z-[101]">
@@ -73,27 +73,32 @@
             </div>
           </nav>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <!-- Main Content -->
-      <div id="app" v-cloak>
-        <!-- Banner Section: 使用 Tailwind CSS 重构 -->
-        <div class="relative">
-          <img 
-            src="static/images/image-1.png" 
-            alt="Banner" 
-            class="w-full h-auto"
-          />
-          <!-- Banner Text Overlay -->
-          <div class="absolute bottom-12 md:bottom-16 lg:bottom-20 left-1/6 w-2/3 md:w-1/2 flex flex-col items-start gap-6 md:gap-8">
-            <!-- 响应式标题 -->
-            <span class="text-white text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-light leading-tight max-w-[10em] text-balance">
-              Industry Leading TOPCon Solar
-            </span>
-            <!-- 响应式按钮 -->
-            <button class="btn-primary text-sm sm:text-base md:text-lg lg:text-xl">
-              Discover
-            </button>
+    <!-- Main Content: 全宽显示 -->
+    <div id="app" v-cloak>
+      <!-- Banner Section: 使用 Tailwind CSS 重构 - 全宽显示 -->
+      <div class="relative w-full">
+        <img 
+          src="static/images/image-1.png" 
+          alt="Banner" 
+          class="w-full h-auto"
+        />
+        <!-- Banner Text Overlay: 使用 container 限制内容宽度 -->
+        <div class="absolute bottom-12 md:bottom-16 lg:bottom-20 left-0 right-0">
+          <div class="container mx-auto">
+            <!-- 响应式标题容器：左边距占 1/12 (8.333%) -->
+            <div class="pl-[8.333%] flex flex-col items-start gap-6 md:gap-8">
+              <!-- 响应式标题 -->
+              <span class="text-white text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-light leading-tight max-w-[10em] text-balance">
+                Industry Leading TOPCon Solar
+              </span>
+              <!-- 响应式按钮 -->
+              <button class="btn-primary text-sm sm:text-base md:text-lg lg:text-xl">
+                Discover
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -3,6 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 重置默认样式 - 消除白框 */
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    margin: 0px !important;
+  }
+}
+
 /* 自定义组件类 */
 @layer components {
   /* 响应式容器 */
