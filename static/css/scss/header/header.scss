@@ -1,0 +1,467 @@
+// Header 导航栏样式模块
+.dj_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  
+  // 隐藏状态
+  &.hidden {
+    transform: translateY(-100%);
+  }
+  
+  // 背景变体
+  &.dj_bg_t {
+    
+    .nav-container {
+      .nav-menu a {
+        color: #fff;
+        
+        &:hover,
+        &.active {
+          color: #ff9041;
+        }
+      }
+      
+      .nav-contact {
+        color: #fff;
+        border-color: #fff;
+        
+        &:hover {
+          background: #fff;
+          color: #333;
+        }
+      }
+      
+      .dj_navber_btn {
+        color: #fff;
+        border-color: #fff;
+        
+        &:hover {
+          background: #fff;
+          color: #333;
+        }
+      }
+    }
+  }
+  
+  &.dj_bg_1 {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  // 导航容器
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+    
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      
+      .nav-logo {
+        a {
+          display: block;
+          transition: transform 0.3s ease;
+          
+          &:hover {
+            transform: scale(1.05);
+          }
+          
+          img {
+            height: 40px;
+            width: auto;
+            display: block;
+          }
+        }
+      }
+      
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 35px;
+        
+        li {
+          a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 0;
+            position: relative;
+            transition: all 0.3s ease;
+            
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0;
+              height: 2px;
+              background: #ff9041;
+              transition: width 0.3s ease;
+            }
+            
+            &:hover,
+            &.active {
+              color: #ff9041;
+              
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      
+      .nav-contact {
+        color: #ff9041;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 8px 20px;
+        border: 2px solid #ff9041;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background: #ff9041;
+          color: white;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(255, 144, 65, 0.3);
+        }
+      }
+      
+      .dj_navber_btn {
+        color: #333;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 8px 16px;
+        border: 2px solid #ddd;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: white;
+        
+        &:hover {
+          border-color: #ff9041;
+          color: #ff9041;
+          transform: translateY(-2px);
+        }
+        
+        &.active {
+          border-color: #ff9041;
+          background: #ff9041;
+          color: white;
+        }
+      }
+      
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background: rgba(255, 144, 65, 0.1);
+        }
+        
+        .iconfont {
+          font-size: 24px;
+          color: #333;
+          transition: color 0.3s ease;
+        }
+      }
+    }
+  }
+  
+  // 语言下拉菜单
+  .language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+    min-width: 100px;
+    overflow: hidden;
+    margin-top: 10px;
+    
+    .language-option {
+      padding: 12px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid #f5f5f5;
+      transition: all 0.3s ease;
+      color: #333;
+      font-size: 14px;
+      font-weight: 500;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      &:hover {
+        background: #ff9041;
+        color: white;
+        // transform: translateX(5px);
+      }
+    }
+  }
+}
+
+// 产品中心悬浮幕布（如果需要）
+#productsCurtain {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .dj_header {
+    .nav-container {
+      .nav-left {
+        gap: 30px;
+        
+        .nav-menu {
+          gap: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dj_header {
+    .nav-container {
+      padding: 0 15px;
+      height: 60px;
+      
+      .nav-left {
+        .nav-logo a img {
+          height: 35px;
+        }
+        
+        .nav-menu {
+          position: fixed;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background: white;
+          flex-direction: column;
+          padding: 20px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          transform: translateY(-100%);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          gap: 0;
+          
+          &.show {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+          }
+          
+          li {
+            a {
+              display: block;
+              padding: 12px 0;
+              border-bottom: 1px solid #f0f0f0;
+              font-size: 16px;
+              
+              &:last-child {
+                border-bottom: none;
+              }
+              
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      
+      .nav-right {
+        .nav-contact {
+          display: none;
+        }
+        
+        .mobile-menu-btn {
+          display: block;
+        }
+      }
+    }
+    
+    // 移动端透明背景调整
+    &.dj_bg_t {
+      .nav-container {
+        .nav-right .mobile-menu-btn .iconfont {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .dj_header {
+    .nav-container {
+      padding: 0 10px;
+      height: 55px;
+      
+      .nav-left .nav-logo a img {
+        height: 30px;
+      }
+      
+      .nav-right {
+        gap: 15px;
+        
+        .dj_navber_btn {
+          padding: 6px 12px;
+          font-size: 13px;
+        }
+        
+        .mobile-menu-btn {
+          padding: 6px;
+          
+          .iconfont {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    
+    .language-dropdown {
+      min-width: 80px;
+      
+      .language-option {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+// 滚动条宽度补偿（防止布局抖动）
+html {
+  scrollbar-gutter: stable;
+}
+
+// 暗色主题适配
+@media (prefers-color-scheme: dark) {
+  .dj_header:not(.dj_bg_t) {
+    background: rgba(26, 26, 26, 0.95);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    
+    .nav-container {
+      .nav-left .nav-menu a {
+        color: #fff;
+      }
+      
+      .nav-right {
+        .dj_navber_btn {
+          background: #333;
+          color: #fff;
+          border-color: #444;
+        }
+        
+        .mobile-menu-btn .iconfont {
+          color: #fff;
+        }
+      }
+    }
+    
+    .language-dropdown {
+      background: #333;
+      border-color: #444;
+      
+      .language-option {
+        color: #fff;
+        border-bottom-color: #444;
+        
+        &:hover {
+          background: #ff9041;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// 打印样式
+@media print {
+  .dj_header {
+    display: none;
+  }
+}
+
+// 高对比度模式支持
+@media (prefers-contrast: high) {
+  .dj_header {
+    border-bottom-width: 2px;
+    
+    .nav-container .nav-left .nav-menu a::after {
+      height: 3px;
+    }
+  }
+}
+
+// 减少动画模式支持
+@media (prefers-reduced-motion: reduce) {
+  .dj_header {
+    transition: none;
+    
+    .nav-container {
+      .nav-logo a,
+      .nav-menu a,
+      .nav-right .nav-contact,
+      .nav-right .dj_navber_btn {
+        transition: none;
+      }
+    }
+    
+    .language-dropdown .language-option {
+      transition: none;
+    }
+  }
+}

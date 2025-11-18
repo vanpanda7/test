@@ -1,0 +1,336 @@
+// Footer 样式模块
+.dj_footer {
+  width: 100%;
+  background: #333;
+  color: #fff;
+  font-family: inherit;
+  
+  .footer-black {
+    background: #1a1a1a;
+    padding: 40px 0 20px;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+  
+  // 列布局
+  .footer-cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 30px;
+    
+    .footer-col {
+      flex: 1;
+      min-width: 180px;
+      max-width: 220px;
+      
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #ff9041; // 使用主题色
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #ff9041;
+        transition: all 0.3s ease;
+        cursor: default;
+        
+        &.collapsible {
+          cursor: pointer;
+          position: relative;
+          
+          &::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            transition: transform 0.3s ease;
+          }
+        }
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+          margin-bottom: 8px;
+          
+          a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 4px 0;
+            
+            &:hover {
+              color: #ff9041;
+              transform: translateX(5px);
+            }
+          }
+        }
+      }
+      
+      // 移动端折叠效果
+      &:not(.open) {
+        ul {
+          display: none;
+        }
+        
+        h4.collapsible::after {
+          content: '+';
+        }
+      }
+      
+      &.open {
+        ul {
+          display: block;
+        }
+        
+        h4.collapsible::after {
+          content: '-';
+        }
+      }
+    }
+    
+    // 隐藏标题的特殊处理
+    .hidden-title {
+      opacity: 0;
+      pointer-events: none;
+      border-bottom: 2px solid transparent;
+    }
+  }
+  
+  // 底部信息区域
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #444;
+    
+    .footer-bottom-left {
+      flex: 1;
+      min-width: 250px;
+      
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #ff9041;
+        margin-bottom: 15px;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+          margin-bottom: 8px;
+          color: #ccc;
+          font-size: 14px;
+          
+          a {
+            color: #ff9041;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            
+            &:hover {
+              color: #ffa366;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    
+    .footer-bottom-right {
+      flex: 2;
+      min-width: 300px;
+      text-align: right;
+      
+      div {
+        margin-bottom: 8px;
+        color: #999;
+        font-size: 14px;
+        line-height: 1.5;
+        
+        &:last-child {
+          margin-top: 15px;
+          color: #666;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  
+  // 返回顶部按钮（如果需要的话）
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #ff9041;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 144, 65, 0.3);
+    z-index: 1000;
+    
+    &:hover {
+      background: #ff7b1a;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 144, 65, 0.4);
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .dj_footer {
+    .footer-cols {
+      gap: 20px;
+      
+      .footer-col {
+        min-width: 160px;
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dj_footer {
+    .footer-black {
+      padding: 30px 0 15px;
+    }
+    
+    .footer-cols {
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 30px;
+      
+      .footer-col {
+        max-width: 100%;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #444;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+        
+        h4 {
+          margin-bottom: 10px;
+          cursor: pointer;
+          
+          &.collapsible::after {
+            display: block;
+          }
+        }
+        
+        ul {
+          display: none;
+        }
+        
+        &.open {
+          ul {
+            display: block;
+          }
+        }
+      }
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      gap: 25px;
+      text-align: center;
+      
+      .footer-bottom-left,
+      .footer-bottom-right {
+        min-width: 100%;
+        text-align: center;
+      }
+    }
+    
+    .back-to-top {
+      bottom: 20px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .dj_footer {
+    .footer-black .container {
+      padding: 0 15px;
+    }
+    
+    .footer-cols .footer-col {
+      h4 {
+        font-size: 15px;
+      }
+      
+      ul li a {
+        font-size: 13px;
+      }
+    }
+    
+    .footer-bottom {
+      .footer-bottom-left,
+      .footer-bottom-right {
+        font-size: 13px;
+        
+        div:last-child {
+          font-size: 11px;
+        }
+      }
+    }
+    
+    .back-to-top {
+      bottom: 15px;
+      right: 15px;
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+}
+
+// 暗色主题适配
+@media (prefers-color-scheme: dark) {
+  .dj_footer {
+    background: #1a1a1a;
+    
+    .footer-black {
+      background: #0d0d0d;
+    }
+  }
+}
+
+// 打印样式
+@media print {
+  .dj_footer {
+    display: none;
+  }
+}
