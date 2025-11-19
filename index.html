@@ -6,92 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="T1 Energy - Industry Leading TOPCon Solar Technology" />
     <title>T1 Energy - TOPCon Solar Technology</title>
-    <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="./static/css/tailwind.css" />
+    <!-- SCSS Styles -->
+    <link rel="stylesheet" href="./static/css/main.css" />
   </head>
 
-  <body class="bg-[#F2F2F2] text-[#1D1D1D]">
+  <body>
     <!-- Hero Section -->
-    <section class="relative w-full h-screen overflow-hidden">
+    <section class="hero-section">
       <!-- Hero Background Image - 全尺寸高度 -->
-      <div class="absolute inset-0 w-full h-full">
+      <div class="hero-bg">
         <img 
           src="static/images/image-1.png" 
           alt="Solar Panel Background" 
-          class="w-full h-full object-cover"
         />
       </div>
 
       <!-- Header Navigation - 绝对定位在Hero Section上层 -->
-      <header class="absolute top-0 left-0 w-full z-50">
-        <nav class="header-glass flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-4">
+      <header>
+        <nav>
           <!-- Logo -->
-          <div class="flex-shrink-0">
-            <a href="/" class="block">
-              <img src="static/images/logo.png" alt="T1 Energy Logo" class="h-6 sm:h-7 md:h-8 w-auto" />
+          <div class="logo">
+            <a href="/">
+              <img src="static/images/logo.png" alt="T1 Energy Logo" />
             </a>
           </div>
 
           <!-- Navigation Links -->
-          <div class="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8 2xl:gap-12">
-            <a href="/technology/" class="text-white text-sm md:text-base lg:text-base font-medium hover:opacity-80 transition-opacity">
-              Technology
-            </a>
-            <a href="/manufacturing/" class="text-white text-sm md:text-base lg:text-base font-medium hover:opacity-80 transition-opacity">
-              Manufacturing
-            </a>
-            <a href="/company/" class="text-white text-sm md:text-base lg:text-base font-medium hover:opacity-80 transition-opacity">
-              Company
-            </a>
-            <a href="https://ir.t1energy.com/" class="text-white text-sm md:text-base lg:text-base font-medium hover:opacity-80 transition-opacity">
-              Investors
-            </a>
+          <div class="nav-links">
+            <a href="/technology/">Technology</a>
+            <a href="/manufacturing/">Manufacturing</a>
+            <a href="/company/">Company</a>
+            <a href="https://ir.t1energy.com/">Investors</a>
           </div>
 
           <!-- Contact Button -->
-          <div class="flex-shrink-0">
-            <button class="btn-contact bg-[#1D1D1D] text-white px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 rounded-lg text-xs sm:text-sm md:text-base font-medium transition-all duration-300 hover:bg-white hover:text-[#1D1D1D]">
-              Contact
-            </button>
+          <div class="contact-btn">
+            <button class="btn-contact">Contact</button>
           </div>
         </nav>
       </header>
 
       <!-- Hero Content Overlay -->
-      <div class="absolute inset-0 flex items-end">
-        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+      <div class="hero-content">
+        <div class="content-wrapper">
           <!-- Content Frame: column layout, gap: 16px, padding: 64px 0px -->
-          <div class="flex flex-col gap-4 py-16 max-w-[361px] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl">
+          <div class="content-frame">
             <!-- Hero Title - display/small: 36px, lineHeight: 1.222, fontWeight: 380 -->
-            <h1 class="text-white text-[28px] xs:text-[32px] sm:text-[36px] md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light leading-[1.222]">
-              Industry Leading TOPCon Solar
-            </h1>
+            <h1>Industry Leading TOPCon Solar</h1>
             <!-- Button - height: 48px -->
-            <button class="btn-discover bg-[#1D1D1D] text-white px-4 py-2.5 sm:px-4 sm:py-3 h-12 rounded-lg text-sm sm:text-base font-medium transition-all duration-300 hover:bg-white hover:text-[#1D1D1D] w-fit">
-              Discover
-            </button>
+            <button class="discover-btn">Discover</button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Module 2: Separator Image -->
-    <section class="w-full bg-[#F2F2F2] py-2">
-      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-        <div class="flex justify-center items-center">
+    <section class="separator-section">
+      <div class="separator-wrapper">
+        <div class="separator-content">
           <!-- 分隔图片 - 使用占位图片，实际应该从Figma导出SVG -->
-          <div class="w-full max-w-6xl">
-            <img src="static/images/image-11.png" alt="Separator" class="w-full h-auto object-contain" />
+          <div class="separator-image">
+            <img src="static/images/image-11.png" alt="Separator" />
           </div>
         </div>
       </div>
     </section>
 
     <!-- Section Title -->
-    <section class="w-full bg-[#F2F2F2] py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16">
-      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+    <section class="section-title">
+      <div class="title-wrapper">
         <!-- Section Title - 768px 使用 headline/small, 1024px+ 使用 display/medium -->
-        <h2 class="text-[#1D1D1D] text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight">
+        <h2>
           Two form factors.<br />
           Powerful possibilities.
         </h2>
@@ -99,58 +84,48 @@
     </section>
 
     <!-- Products Section -->
-    <section class="w-full bg-[#F2F2F2] py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16">
-      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+    <section class="products-section">
+      <div class="products-wrapper">
+        <div class="products-grid">
           <!-- Utility Product Card -->
-          <div class="bg-white border border-[#1D1D1D]/10 rounded-2xl overflow-hidden">
-            <div class="relative w-full h-56 xs:h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[420px]">
+          <div class="product-card">
+            <div class="product-image">
               <img 
                 src="static/images/image-2.png" 
                 alt="Utility Solar Panel" 
-                class="w-full h-full object-cover"
               />
             </div>
-            <div class="p-5 sm:p-6 md:p-7 lg:p-8">
-              <div class="flex items-center justify-between mb-3 sm:mb-4">
-                <h3 class="text-[#1D1D1D] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light">
-                  Utility
-                </h3>
-                <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 border border-[#1D1D1D]/20 rounded-full text-[#1D1D1D] text-sm sm:text-base md:text-lg font-medium">
-                  600W
-                </span>
+            <div class="product-content">
+              <div class="product-header">
+                <h3>Utility</h3>
+                <span class="product-badge">600W</span>
               </div>
-              <p class="text-[#1D1D1D] text-xs sm:text-sm md:text-base font-medium mb-3 sm:mb-4">
+              <p class="product-specs">
                 238 cm x 113 cm x 3 cm
               </p>
-              <p class="text-[#1D1D1D] text-xs sm:text-sm md:text-base leading-relaxed">
+              <p class="product-description">
                 A utility-scale workhorse designed for decades of highly efficient electrical output. Designed for solar farms.
               </p>
             </div>
           </div>
 
           <!-- Residential Product Card -->
-          <div class="bg-[#1D1D1D] rounded-2xl overflow-hidden">
-            <div class="relative w-full h-56 xs:h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[420px]">
+          <div class="product-card dark">
+            <div class="product-image">
               <img 
                 src="static/images/image-3.png" 
                 alt="Residential Solar Panel" 
-                class="w-full h-full object-cover"
               />
             </div>
-            <div class="p-5 sm:p-6 md:p-7 lg:p-8">
-              <div class="flex items-center justify-between mb-3 sm:mb-4">
-                <h3 class="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light">
-                  Residential
-                </h3>
-                <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 border border-white/20 rounded-full text-white text-sm sm:text-base md:text-lg font-medium">
-                  430W
-                </span>
+            <div class="product-content">
+              <div class="product-header">
+                <h3>Residential</h3>
+                <span class="product-badge">430W</span>
               </div>
-              <p class="text-white text-xs sm:text-sm md:text-base font-medium mb-3 sm:mb-4">
+              <p class="product-specs">
                 176 cm x 113 cm x 3.5 cm
               </p>
-              <p class="text-white text-xs sm:text-sm md:text-base leading-relaxed">
+              <p class="product-description">
                 One-sided modules with high-density technology deliver considerable output for their small size
               </p>
             </div>
@@ -160,56 +135,54 @@
     </section>
 
     <!-- Section Divider (Spacer) -->
-    <div class="w-full h-6 sm:h-8 md:h-12 lg:h-16 xl:h-20 bg-[#F2F2F2]"></div>
+    <div class="section-divider"></div>
 
     <!-- Module 5: Efficiency Section -->
-    <section class="w-full bg-[#F2F2F2] py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20">
-      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+    <section class="efficiency-section">
+      <div class="efficiency-wrapper">
         <!-- 模块5整体是垂直列布局，gap: 64px -->
-        <div class="flex flex-col items-center gap-12 sm:gap-14 md:gap-16">
+        <div class="efficiency-content">
           <!-- 标题区域 -->
-          <div class="w-full max-w-4xl">
-            <div class="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
-              <div class="w-1 h-8 sm:h-10 md:h-12 bg-[#1D1D1D]"></div>
-              <span class="text-[#1D1D1D] text-sm sm:text-base md:text-lg font-medium uppercase tracking-wider">Efficiency</span>
+          <div class="efficiency-title">
+            <div class="title-label">
+              <div class="label-bar"></div>
+              <span class="label-text">Efficiency</span>
             </div>
-            <h2 class="text-[#1D1D1D] text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
-              Better Technology. Higher Conversion.
-            </h2>
+            <h2>Better Technology. Higher Conversion.</h2>
           </div>
           
           <!-- 数据卡片区域 - 垂直排列，每个卡片是横向布局 -->
-          <div class="w-full max-w-4xl space-y-4 sm:space-y-6 md:space-y-8">
+          <div class="efficiency-cards">
             <!-- Efficiency Card 1: 23% -->
-            <div class="flex items-stretch gap-2">
-              <div class="w-1 sm:w-2 flex-shrink-0"></div>
-              <div class="flex-1">
-                <p class="text-[#1D1D1D] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-2">
-                  23<span class="text-2xl sm:text-3xl md:text-4xl">%</span>
+            <div class="efficiency-card">
+              <div class="card-spacer"></div>
+              <div class="card-content">
+                <p class="card-value">
+                  23<span>%</span>
                 </p>
-                <p class="text-[#1D1D1D] text-sm sm:text-base font-medium">Module Maximum Efficiency</p>
+                <p class="card-label">Module Maximum Efficiency</p>
               </div>
             </div>
 
             <!-- Efficiency Card 2: +27% -->
-            <div class="flex items-stretch gap-2">
-              <div class="w-1 sm:w-2 flex-shrink-0"></div>
-              <div class="flex-1">
-                <p class="text-[#1D1D1D] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-2">
-                  +27<span class="text-2xl sm:text-3xl md:text-4xl">%</span>
+            <div class="efficiency-card">
+              <div class="card-spacer"></div>
+              <div class="card-content">
+                <p class="card-value">
+                  +27<span>%</span>
                 </p>
-                <p class="text-[#1D1D1D] text-sm sm:text-base font-medium">Electricity produced per acre vs competitor</p>
+                <p class="card-label">Electricity produced per acre vs competitor</p>
               </div>
             </div>
 
             <!-- Efficiency Card 3: +70 MWh -->
-            <div class="flex items-stretch gap-2">
-              <div class="w-1 sm:w-2 flex-shrink-0"></div>
-              <div class="flex-1">
-                <p class="text-[#1D1D1D] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-2">
-                  +70<span class="text-2xl sm:text-3xl md:text-4xl"> MWh</span>
+            <div class="efficiency-card">
+              <div class="card-spacer"></div>
+              <div class="card-content">
+                <p class="card-value">
+                  +70<span> MWh</span>
                 </p>
-                <p class="text-[#1D1D1D] text-sm sm:text-base font-medium">Electricity produced per acre vs competitor</p>
+                <p class="card-label">Electricity produced per acre vs competitor</p>
               </div>
             </div>
           </div>
@@ -218,38 +191,38 @@
     </section>
 
     <!-- Section Divider (Spacer) -->
-    <div class="w-full h-6 sm:h-8 md:h-12 lg:h-16 xl:h-20 bg-[#F2F2F2]"></div>
+    <div class="section-divider"></div>
 
     <!-- Module 6: Durability Section -->
-    <section class="w-full bg-[#F2F2F2] py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16">
-      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-        <div class="flex items-center gap-3 mb-4 sm:mb-5 md:mb-6">
-          <div class="w-1 h-8 sm:h-10 md:h-12 bg-[#1D1D1D]"></div>
-          <span class="text-[#1D1D1D] text-sm sm:text-base md:text-lg font-medium uppercase tracking-wider">Durability</span>
+    <section class="durability-section">
+      <div class="durability-wrapper">
+        <div class="durability-label">
+          <div class="label-bar"></div>
+          <span class="label-text">Durability</span>
         </div>
-        <h2 class="text-[#1D1D1D] text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-4xl">
+        <h2>
           T1 Energy produces ground-mounted modules with a 30-year power warranty.
         </h2>
       </div>
     </section>
 
     <!-- Section Divider (Spacer) -->
-    <div class="w-full h-6 sm:h-8 md:h-12 lg:h-16 xl:h-20 bg-[#F2F2F2]"></div>
+    <div class="section-divider"></div>
 
     <!-- Module 7: Technology Features Section -->
-    <section class="w-full bg-[#F2F2F2] py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16">
-      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+    <section class="technology-section">
+      <div class="technology-wrapper">
+        <div class="technology-grid">
           <!-- Feature Card 1 -->
-          <div class="bg-white rounded-2xl overflow-hidden border border-[#1D1D1D]/10">
-            <div class="relative w-full h-48 sm:h-56 md:h-64">
-              <img src="static/images/image-4.png" alt="N Type Silicon" class="w-full h-full object-cover" />
+          <div class="feature-card">
+            <div class="feature-image">
+              <img src="static/images/image-4.png" alt="N Type Silicon" />
             </div>
-            <div class="p-4 sm:p-6">
-              <div class="flex items-center justify-between">
-                <span class="text-[#1D1D1D] text-base sm:text-lg md:text-xl font-medium">N Type Silicon</span>
-                <div class="w-8 h-8 rounded-full bg-[#1D1D1D] flex items-center justify-center">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="feature-content">
+              <div class="feature-header">
+                <span class="feature-title">N Type Silicon</span>
+                <div class="feature-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                   </svg>
                 </div>
@@ -258,15 +231,15 @@
           </div>
 
           <!-- Feature Card 2 -->
-          <div class="bg-white rounded-2xl overflow-hidden border border-[#1D1D1D]/10">
-            <div class="relative w-full h-48 sm:h-56 md:h-64">
-              <img src="static/images/image-5.png" alt="Bi-Facial Glass/Glass Modules" class="w-full h-full object-cover" />
+          <div class="feature-card">
+            <div class="feature-image">
+              <img src="static/images/image-5.png" alt="Bi-Facial Glass/Glass Modules" />
             </div>
-            <div class="p-4 sm:p-6">
-              <div class="flex items-center justify-between">
-                <span class="text-[#1D1D1D] text-base sm:text-lg md:text-xl font-medium">Bi-Facial Glass/Glass Modules</span>
-                <div class="w-8 h-8 rounded-full bg-[#1D1D1D] flex items-center justify-center">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="feature-content">
+              <div class="feature-header">
+                <span class="feature-title">Bi-Facial Glass/Glass Modules</span>
+                <div class="feature-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                   </svg>
                 </div>
@@ -275,15 +248,15 @@
           </div>
 
           <!-- Feature Card 3 -->
-          <div class="bg-white rounded-2xl overflow-hidden border border-[#1D1D1D]/10">
-            <div class="relative w-full h-48 sm:h-56 md:h-64">
-              <img src="static/images/image-6.png" alt="Bypass Diodes" class="w-full h-full object-cover" />
+          <div class="feature-card">
+            <div class="feature-image">
+              <img src="static/images/image-6.png" alt="Bypass Diodes" />
             </div>
-            <div class="p-4 sm:p-6">
-              <div class="flex items-center justify-between">
-                <span class="text-[#1D1D1D] text-base sm:text-lg md:text-xl font-medium">Bypass Diodes</span>
-                <div class="w-8 h-8 rounded-full bg-[#1D1D1D] flex items-center justify-center">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="feature-content">
+              <div class="feature-header">
+                <span class="feature-title">Bypass Diodes</span>
+                <div class="feature-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                   </svg>
                 </div>
@@ -292,15 +265,15 @@
           </div>
 
           <!-- Feature Card 4 -->
-          <div class="bg-white rounded-2xl overflow-hidden border border-[#1D1D1D]/10">
-            <div class="relative w-full h-48 sm:h-56 md:h-64">
-              <img src="static/images/image-7.png" alt="Half-cut cells" class="w-full h-full object-cover" />
+          <div class="feature-card">
+            <div class="feature-image">
+              <img src="static/images/image-7.png" alt="Half-cut cells" />
             </div>
-            <div class="p-4 sm:p-6">
-              <div class="flex items-center justify-between">
-                <span class="text-[#1D1D1D] text-base sm:text-lg md:text-xl font-medium">Half-cut cells</span>
-                <div class="w-8 h-8 rounded-full bg-[#1D1D1D] flex items-center justify-center">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="feature-content">
+              <div class="feature-header">
+                <span class="feature-title">Half-cut cells</span>
+                <div class="feature-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                   </svg>
                 </div>
@@ -312,55 +285,55 @@
     </section>
 
     <!-- Section Divider (Spacer) -->
-    <div class="w-full h-6 sm:h-8 md:h-12 lg:h-16 xl:h-20 bg-[#F2F2F2]"></div>
+    <div class="section-divider"></div>
 
     <!-- Module 8: Supply Chain Commitment Section -->
-    <section class="w-full bg-[#F2F2F2] py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16">
-      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-        <div class="bg-white rounded-2xl overflow-hidden border border-[#1D1D1D]/10">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            <div class="relative w-full h-64 sm:h-80 md:h-96 lg:h-full min-h-[400px]">
-              <img src="static/images/image-8.png" alt="Supply Chain" class="w-full h-full object-cover" />
+    <section class="supply-chain-section">
+      <div class="supply-chain-wrapper">
+        <div class="supply-chain-card">
+          <div class="supply-chain-grid">
+            <div class="supply-chain-image">
+              <img src="static/images/image-8.png" alt="Supply Chain" />
             </div>
-            <div class="p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
-              <div class="mb-6 sm:mb-8">
-                <div class="flex items-center gap-2 mb-4">
-                  <svg class="w-6 h-6 text-[#1D1D1D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="supply-chain-content">
+              <div class="supply-chain-header">
+                <div class="header-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                 </div>
-                <p class="text-[#1D1D1D] text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
+                <p>
                   T1's commitment: Build a future domestic supply chain from raw materials abundantly found in the USA
                 </p>
               </div>
-              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4">
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-[#1D1D1D]"></div>
-                  <span class="text-[#1D1D1D] text-sm sm:text-base font-medium">Glass</span>
+              <div class="supply-chain-list">
+                <div class="supply-item">
+                  <div class="item-dot"></div>
+                  <span>Glass</span>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-[#1D1D1D]"></div>
-                  <span class="text-[#1D1D1D] text-sm sm:text-base font-medium">Aluminum</span>
+                <div class="supply-item">
+                  <div class="item-dot"></div>
+                  <span>Aluminum</span>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-[#1D1D1D]"></div>
-                  <span class="text-[#1D1D1D] text-sm sm:text-base font-medium">Silicon</span>
+                <div class="supply-item">
+                  <div class="item-dot"></div>
+                  <span>Silicon</span>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-[#1D1D1D]"></div>
-                  <span class="text-[#1D1D1D] text-sm sm:text-base font-medium">EVA</span>
+                <div class="supply-item">
+                  <div class="item-dot"></div>
+                  <span>EVA</span>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-[#1D1D1D]"></div>
-                  <span class="text-[#1D1D1D] text-sm sm:text-base font-medium">Rubber</span>
+                <div class="supply-item">
+                  <div class="item-dot"></div>
+                  <span>Rubber</span>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-[#1D1D1D]"></div>
-                  <span class="text-[#1D1D1D] text-sm sm:text-base font-medium">Copper</span>
+                <div class="supply-item">
+                  <div class="item-dot"></div>
+                  <span>Copper</span>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-[#1D1D1D]"></div>
-                  <span class="text-[#1D1D1D] text-sm sm:text-base font-medium">Silver</span>
+                <div class="supply-item">
+                  <div class="item-dot"></div>
+                  <span>Silver</span>
                 </div>
               </div>
             </div>
@@ -370,28 +343,28 @@
     </section>
 
     <!-- Section Divider (Spacer) -->
-    <div class="w-full h-6 sm:h-8 md:h-12 lg:h-16 xl:h-20 bg-[#F2F2F2]"></div>
+    <div class="section-divider"></div>
 
     <!-- Module 9: Factory/Location Section -->
-    <section class="w-full bg-[#F2F2F2] py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16">
-      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-        <div class="bg-white rounded-2xl overflow-hidden border border-[#1D1D1D]/10">
-          <div class="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px]">
-            <img src="static/images/image-9.png" alt="G1 Dallas Factory" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div class="absolute bottom-6 sm:bottom-8 md:bottom-12 left-6 sm:left-8 md:left-12 right-6 sm:right-8 md:right-12">
-              <h2 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-4 sm:mb-6">G1_Dallas</h2>
-              <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 sm:p-6 flex-1">
-                  <p class="text-white text-sm sm:text-base mb-2">32.60157°N，-96.70376°W</p>
+    <section class="factory-section">
+      <div class="factory-wrapper">
+        <div class="factory-card">
+          <div class="factory-image">
+            <img src="static/images/image-9.png" alt="G1 Dallas Factory" />
+            <div class="image-overlay"></div>
+            <div class="factory-content">
+              <h2>G1_Dallas</h2>
+              <div class="factory-stats">
+                <div class="stat-card">
+                  <p>32.60157°N，-96.70376°W</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 sm:p-6 flex-1">
-                  <p class="text-white text-2xl sm:text-3xl md:text-4xl font-light mb-1">5GW/year</p>
-                  <p class="text-white text-xs sm:text-sm uppercase tracking-wider">SOLAR MODULE PRODUCTION CAPACITY</p>
+                <div class="stat-card">
+                  <p class="stat-value">5GW/year</p>
+                  <p class="stat-label">SOLAR MODULE PRODUCTION CAPACITY</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 sm:p-6 flex-1">
-                  <p class="text-white text-2xl sm:text-3xl md:text-4xl font-light mb-1">12,000/day</p>
-                  <p class="text-white text-xs sm:text-sm uppercase tracking-wider">AVG PANEL PRODUCED</p>
+                <div class="stat-card">
+                  <p class="stat-value">12,000/day</p>
+                  <p class="stat-label">AVG PANEL PRODUCED</p>
                 </div>
               </div>
             </div>
@@ -401,28 +374,25 @@
     </section>
 
     <!-- Section Divider (Spacer) -->
-    <div class="w-full h-6 sm:h-8 md:h-12 lg:h-16 xl:h-20 bg-[#F2F2F2]"></div>
+    <div class="section-divider"></div>
 
     <!-- Module 10: Subscribe Section -->
-    <section class="w-full bg-[#F2F2F2] py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16">
-      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-        <div class="relative rounded-2xl overflow-hidden">
-          <div class="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px]">
-            <img src="static/images/image-10.png" alt="Join the movement" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="text-center px-4 sm:px-6 md:px-8 max-w-2xl">
-                <h2 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-6 sm:mb-8">Join the movement</h2>
-                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 md:p-8 border border-white/20">
-                  <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+    <section class="subscribe-section">
+      <div class="subscribe-wrapper">
+        <div class="subscribe-card">
+          <div class="subscribe-image">
+            <img src="static/images/image-10.png" alt="Join the movement" />
+            <div class="image-overlay"></div>
+            <div class="subscribe-content">
+              <div class="content-box">
+                <h2>Join the movement</h2>
+                <div class="subscribe-form">
+                  <div class="form-group">
                     <input 
                       type="email" 
                       placeholder="Enter your email address" 
-                      class="flex-1 bg-transparent border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm sm:text-base"
                     />
-                    <button class="btn-subscribe bg-white text-[#1D1D1D] px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-sm sm:text-base md:text-lg font-medium transition-all duration-300 hover:bg-[#1D1D1D] hover:text-white whitespace-nowrap">
-                      Subscribe
-                    </button>
+                    <button class="btn-subscribe">Subscribe</button>
                   </div>
                 </div>
               </div>
@@ -433,102 +403,102 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="w-full bg-[#1D1D1D] text-white py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20">
-      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+    <footer class="footer">
+      <div class="footer-wrapper">
         <!-- Footer Navigation Grid -->
-        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+        <div class="footer-nav">
           <!-- Column 1: About -->
           <div>
-            <nav class="space-y-3 sm:space-y-4">
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">1.1</span>
-                <a href="/about/" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">ABOUT</a>
+            <nav>
+              <div class="nav-item">
+                <span class="nav-number">1.1</span>
+                <a href="/about/">ABOUT</a>
               </div>
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">1.2</span>
-                <a href="/technology/" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">TECHNOLOGY</a>
+              <div class="nav-item">
+                <span class="nav-number">1.2</span>
+                <a href="/technology/">TECHNOLOGY</a>
               </div>
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">1.3</span>
-                <a href="/manufacturing/" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">MANUFACTURING</a>
+              <div class="nav-item">
+                <span class="nav-number">1.3</span>
+                <a href="/manufacturing/">MANUFACTURING</a>
               </div>
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">1.4</span>
-                <a href="/company/" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">COMPANY</a>
+              <div class="nav-item">
+                <span class="nav-number">1.4</span>
+                <a href="/company/">COMPANY</a>
               </div>
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">1.5</span>
-                <a href="/subscribe/" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">SUBSCRIBE</a>
+              <div class="nav-item">
+                <span class="nav-number">1.5</span>
+                <a href="/subscribe/">SUBSCRIBE</a>
               </div>
             </nav>
           </div>
 
           <!-- Column 2: Investors -->
           <div>
-            <nav class="space-y-3 sm:space-y-4">
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">2.1</span>
-                <a href="https://ir.t1energy.com/" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">INVESTORS</a>
+            <nav>
+              <div class="nav-item">
+                <span class="nav-number">2.1</span>
+                <a href="https://ir.t1energy.com/">INVESTORS</a>
               </div>
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">2.2</span>
-                <a href="/news/" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">NEWS</a>
+              <div class="nav-item">
+                <span class="nav-number">2.2</span>
+                <a href="/news/">NEWS</a>
               </div>
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">2.3</span>
-                <a href="/governance/" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">GOVERNANCE</a>
+              <div class="nav-item">
+                <span class="nav-number">2.3</span>
+                <a href="/governance/">GOVERNANCE</a>
               </div>
             </nav>
           </div>
 
           <!-- Column 3: Social Media -->
           <div>
-            <nav class="space-y-3 sm:space-y-4">
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">3.1</span>
-                <a href="https://linkedin.com/company/t1energy" target="_blank" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">LINKEDIN</a>
+            <nav>
+              <div class="nav-item">
+                <span class="nav-number">3.1</span>
+                <a href="https://linkedin.com/company/t1energy" target="_blank">LINKEDIN</a>
               </div>
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">3.2</span>
-                <a href="https://twitter.com/t1energy" target="_blank" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">X [TWITTER]</a>
+              <div class="nav-item">
+                <span class="nav-number">3.2</span>
+                <a href="https://twitter.com/t1energy" target="_blank">X [TWITTER]</a>
               </div>
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">3.3</span>
-                <a href="https://youtube.com/@t1energy" target="_blank" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">YOUTUBE</a>
+              <div class="nav-item">
+                <span class="nav-number">3.3</span>
+                <a href="https://youtube.com/@t1energy" target="_blank">YOUTUBE</a>
               </div>
             </nav>
           </div>
 
           <!-- Column 4: Legal -->
           <div>
-            <nav class="space-y-3 sm:space-y-4">
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">4.1</span>
-                <a href="/terms/" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">TERMS OF USE</a>
+            <nav>
+              <div class="nav-item">
+                <span class="nav-number">4.1</span>
+                <a href="/terms/">TERMS OF USE</a>
               </div>
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">4.2</span>
-                <a href="/privacy/" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">PRIVACY POLICY</a>
+              <div class="nav-item">
+                <span class="nav-number">4.2</span>
+                <a href="/privacy/">PRIVACY POLICY</a>
               </div>
-              <div class="flex items-start gap-2">
-                <span class="text-white/60 text-xs sm:text-sm font-medium">4.3</span>
-                <a href="/cookies/" class="text-white text-xs sm:text-sm hover:opacity-80 transition-opacity">COOKIES</a>
+              <div class="nav-item">
+                <span class="nav-number">4.3</span>
+                <a href="/cookies/">COOKIES</a>
               </div>
             </nav>
           </div>
         </div>
 
         <!-- Footer Bottom -->
-        <div class="border-t border-white/10 pt-6 sm:pt-8 md:pt-10 lg:pt-12">
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
+        <div class="footer-bottom">
+          <div class="footer-content">
             <!-- Logo -->
-            <div class="mb-2 sm:mb-0">
-              <img src="static/images/logo.png" alt="T1 Energy Logo" class="h-6 sm:h-7 md:h-8 w-auto" />
+            <div class="footer-logo">
+              <img src="static/images/logo.png" alt="T1 Energy Logo" />
             </div>
             <!-- Copyright -->
-            <div class="flex flex-col gap-1 sm:gap-2">
-              <p class="text-white/60 text-xs sm:text-sm">© 2025</p>
-              <p class="text-white text-xs sm:text-sm">
+            <div class="footer-copyright">
+              <p>© 2025</p>
+              <p class="copyright-text">
                 All rights reserved, T1 Energy Inc.<br />
                 Austin, Texas, USA
               </p>

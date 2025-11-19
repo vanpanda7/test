@@ -1,13 +1,12 @@
 {
   "name": "responsive-project",
   "version": "1.0.0",
-  "description": "响应式项目 - 使用 Tailwind CSS",
+  "description": "响应式项目 - 使用 SCSS",
   "scripts": {
-    "build-css": "tailwindcss -i ./src/input.css -o ./static/css/tailwind.css --watch",
-    "build-css-prod": "tailwindcss -i ./src/input.css -o ./static/css/tailwind.css --minify"
+    "build-scss": "sass src/styles/main.scss static/css/main.css --watch",
+    "build-scss-prod": "sass src/styles/main.scss static/css/main.css --style compressed"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.1"
+    "sass": "^1.94.1"
   }
 }
-
