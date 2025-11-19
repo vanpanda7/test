@@ -1,6 +1,8 @@
 // ============================================
 // 变量定义
 // ============================================
+@use "sass:math";
+
 $color-primary: #1D1D1D;
 $color-secondary: #F2F2F2;
 $color-white: #FFFFFF;
@@ -92,6 +94,94 @@ body {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+}
+
+// ============================================
+// 网格系统 (Grid System) - 类似 Bootstrap
+// ============================================
+// 网格列数
+$grid-columns: 12;
+// 网格间距
+$grid-gutter: 1rem;
+
+// 行容器
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: math.div(-$grid-gutter, 2);
+  margin-right: math.div(-$grid-gutter, 2);
+}
+
+// 列容器基础样式
+[class*="col-"] {
+  position: relative;
+  width: 100%;
+  padding-left: math.div($grid-gutter, 2);
+  padding-right: math.div($grid-gutter, 2);
+  flex: 0 0 auto;
+}
+
+// 生成列的 Mixin
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 auto;
+  width: math.percentage(math.div($size, $columns));
+}
+
+// 生成所有断点的列类
+@mixin make-grid-columns($breakpoint: null) {
+  $infix: if($breakpoint == null, "", "-#{$breakpoint}");
+
+  // 生成 col-{breakpoint}-1 到 col-{breakpoint}-12
+  @for $i from 1 through $grid-columns {
+    .col#{$infix}-#{$i} {
+      @include make-col($i);
+    }
+  }
+
+  // 生成 col-{breakpoint}-auto (自动宽度)
+  .col#{$infix}-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  // 生成 col-{breakpoint} (占满整行)
+  .col#{$infix} {
+    flex: 1 0 0%;
+  }
+}
+
+// 基础列（移动端，无断点前缀）
+@include make-grid-columns();
+
+// 生成各断点的列类
+// xs 断点 (393px+)
+@include respond-to(xs) {
+  @include make-grid-columns(xs);
+}
+
+// sm 断点 (768px+)
+@include respond-to(sm) {
+  @include make-grid-columns(sm);
+}
+
+// md 断点 (1024px+)
+@include respond-to(md) {
+  @include make-grid-columns(md);
+}
+
+// lg 断点 (1440px+)
+@include respond-to(lg) {
+  @include make-grid-columns(lg);
+}
+
+// xl 断点 (1920px+)
+@include respond-to(xl) {
+  @include make-grid-columns(xl);
+}
+
+// 2xl 断点 (2560px+)
+@include respond-to(2xl) {
+  @include make-grid-columns(2xl);
 }
 
 // ============================================
