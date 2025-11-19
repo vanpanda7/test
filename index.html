@@ -11,9 +11,19 @@
   </head>
 
   <body class="bg-[#F2F2F2] text-[#1D1D1D]">
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 pt-3 sm:pt-4 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-      <div class="container mx-auto">
+    <!-- Hero Section -->
+    <section class="relative w-full h-screen overflow-hidden">
+      <!-- Hero Background Image - 全尺寸高度 -->
+      <div class="absolute inset-0 w-full h-full">
+        <img 
+          src="static/images/image-1.png" 
+          alt="Solar Panel Background" 
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Header Navigation - 绝对定位在Hero Section上层 -->
+      <header class="absolute top-0 left-0 w-full z-50">
         <nav class="header-glass flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-4">
           <!-- Logo -->
           <div class="flex-shrink-0">
@@ -45,32 +55,21 @@
             </button>
           </div>
         </nav>
-      </div>
-    </header>
+      </header>
 
-    <!-- Hero Section -->
-    <section class="relative w-full pt-16 sm:pt-20 md:pt-24">
-      <!-- Hero Background Image -->
-      <div class="relative w-full h-[300px] xs:h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px] xl:h-[750px] 2xl:h-[852px]">
-        <img 
-          src="static/images/image-1.png" 
-          alt="Solar Panel Background" 
-          class="w-full h-full object-cover"
-        />
-        <!-- Hero Content Overlay -->
-        <div class="absolute inset-0 flex items-end">
-          <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-            <!-- Content Frame: column layout, gap: 16px, padding: 64px 0px -->
-            <div class="flex flex-col gap-4 py-16 max-w-[361px] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl">
-              <!-- Hero Title - display/small: 36px, lineHeight: 1.222, fontWeight: 380 -->
-              <h1 class="text-white text-[28px] xs:text-[32px] sm:text-[36px] md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light leading-[1.222]">
-                Industry Leading TOPCon Solar
-              </h1>
-              <!-- Button - height: 48px -->
-              <button class="btn-discover bg-[#1D1D1D] text-white px-4 py-2.5 sm:px-4 sm:py-3 h-12 rounded-lg text-sm sm:text-base font-medium transition-all duration-300 hover:bg-white hover:text-[#1D1D1D] w-fit">
-                Discover
-              </button>
-            </div>
+      <!-- Hero Content Overlay -->
+      <div class="absolute inset-0 flex items-end">
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+          <!-- Content Frame: column layout, gap: 16px, padding: 64px 0px -->
+          <div class="flex flex-col gap-4 py-16 max-w-[361px] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl">
+            <!-- Hero Title - display/small: 36px, lineHeight: 1.222, fontWeight: 380 -->
+            <h1 class="text-white text-[28px] xs:text-[32px] sm:text-[36px] md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light leading-[1.222]">
+              Industry Leading TOPCon Solar
+            </h1>
+            <!-- Button - height: 48px -->
+            <button class="btn-discover bg-[#1D1D1D] text-white px-4 py-2.5 sm:px-4 sm:py-3 h-12 rounded-lg text-sm sm:text-base font-medium transition-all duration-300 hover:bg-white hover:text-[#1D1D1D] w-fit">
+              Discover
+            </button>
           </div>
         </div>
       </div>
