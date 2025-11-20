@@ -1,0 +1,16 @@
+// ============================================
+// XXXL 断点样式 (2560px+)
+// ============================================
+// 用途：4K 显示器的样式
+// 断点：2560px 及以上
+// 修改位置：本文件
+// 使用：@include media-breakpoint-up(xxxl) { ... }
+
+@include media-breakpoint-up(xxxl) {
+  // 示例：XXXL 断点的自定义样式
+  // .my-component {
+  //   font-size: $font-size-4xl;
+  //   padding: $spacing-xxl;
+  // }
+}
+

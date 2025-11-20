@@ -1,0 +1,16 @@
+// ============================================
+// LG 断点样式 (1024px+)
+// ============================================
+// 用途：桌面设备的样式
+// 断点：1024px 及以上
+// 修改位置：本文件
+// 使用：@include media-breakpoint-up(lg) { ... }
+
+@include media-breakpoint-up(lg) {
+  // 示例：LG 断点的自定义样式
+  // .my-component {
+  //   font-size: $font-size-xl;
+  //   padding: $spacing-xl;
+  // }
+}
+

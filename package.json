@@ -1,12 +1,16 @@
 {
-  "name": "responsive-project",
+  "name": "scss-bootstrap-project",
   "version": "1.0.0",
-  "description": "响应式项目 - 使用 SCSS",
+  "description": "项目使用 SCSS 和 Bootstrap",
   "scripts": {
-    "build-scss": "sass src/styles/main.scss static/css/main.css --watch",
-    "build-scss-prod": "sass src/styles/main.scss static/css/main.css --style compressed"
+    "build-scss": "sass src/styles/main.scss static/css/main.css --watch --quiet-deps",
+    "build-scss-prod": "sass src/styles/main.scss static/css/main.css --style compressed --quiet-deps"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
   },
   "devDependencies": {
     "sass": "^1.94.1"
   }
 }
+

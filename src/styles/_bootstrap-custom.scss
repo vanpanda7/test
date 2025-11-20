@@ -1,0 +1,84 @@
+// ============================================
+// Bootstrap 自定义配置
+// ============================================
+// 用途：自定义 Bootstrap 的断点、颜色、字体等变量
+// 修改位置：根据下方注释中的行号
+// 详细文档：参考 CUSTOM_STYLES_REFERENCE.md
+
+// 第一步：导入 Bootstrap functions（必须先导入）
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 第二步：定义自定义变量（在导入 variables 之前）
+// ============================================
+// 自定义断点 - 覆盖 Bootstrap 默认断点
+// ============================================
+// 修改位置：第 10-18 行
+// 用途：定义响应式断点，用于媒体查询和 Bootstrap 网格系统
+// 使用：@include media-breakpoint-up(sm) { ... } 或 col-sm-*
+$grid-breakpoints: (
+  xs: 0,        // 0px+ - 移动设备（最小）
+  sm: 393px,    // 393px+ - 小屏幕设备
+  md: 768px,    // 768px+ - 平板设备
+  lg: 1024px,   // 1024px+ - 桌面设备
+  xl: 1440px,   // 1440px+ - 大桌面设备
+  xxl: 1920px,  // 1920px+ - 超大桌面设备
+  xxxl: 2560px  // 2560px+ - 4K 显示器
+);
+
+// ============================================
+// 容器最大宽度
+// ============================================
+// 修改位置：第 20-28 行
+// 用途：定义 Bootstrap container 类的最大宽度
+// 注意：本项目不使用容器，此配置仅供参考
+$container-max-widths: (
+  sm: 373px,    // 小屏幕最大宽度
+  md: 748px,    // 平板最大宽度
+  lg: 1004px,   // 桌面最大宽度
+  xl: 1420px,   // 大桌面最大宽度
+  xxl: 1900px,  // 超大桌面最大宽度
+  xxxl: 2540px  // 4K 显示器最大宽度
+);
+
+// ============================================
+// 网格系统配置
+// ============================================
+// 修改位置：第 30-34 行
+// 网格列数 - Bootstrap 标准网格的列数（默认 12 列）
+$grid-columns: 12;
+
+// 网格间距 - 列之间的间距，影响 row 和 col-* 的间距
+$grid-gutter-width: 1rem;
+
+// ============================================
+// 自定义颜色
+// ============================================
+// 修改位置：第 36-45 行
+// 用途：覆盖 Bootstrap 的默认颜色
+// 使用：bg-primary, text-primary, btn-primary 等
+$primary: #0d6efd;    // 主色（蓝色）
+$secondary: #6c757d;   // 次要色（灰色）
+$success: #198754;     // 成功色（绿色）
+$danger: #dc3545;      // 危险色（红色）
+$warning: #ffc107;     // 警告色（黄色）
+$info: #0dcaf0;        // 信息色（青色）
+$light: #f8f9fa;       // 浅色（浅灰）
+$dark: #212529;        // 深色（深灰）
+$white: #ffffff;       // 白色
+
+// ============================================
+// 字体设置
+// ============================================
+// 修改位置：第 48 行
+// 用途：设置全局默认字体，会应用到 body 和所有 Bootstrap 组件
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// 第三步：导入 Bootstrap variables（会使用上面定义的自定义值）
+@import "../../node_modules/bootstrap/scss/variables";
+
+// 第四步：导入 Bootstrap mixins
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// 第五步：导入 Bootstrap 其他部分
+@import "../../node_modules/bootstrap/scss/bootstrap"; // 导入整个 Bootstrap
+

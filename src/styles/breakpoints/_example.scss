@@ -1,0 +1,70 @@
+// ============================================
+// 断点样式使用示例（参考文件）
+// ============================================
+// 用途：展示如何在不同断点下让 class 生效
+// 注意：这是示例文件，不会被编译，仅供参考
+
+// ============================================
+// 方式 1：同一个 class 在不同断点下有不同的样式
+// ============================================
+
+// 在 _xs.scss 中（基础样式，0px+）
+// .responsive-card {
+//   padding: $spacing-sm;
+//   font-size: $font-size-sm;
+// }
+
+// 在 _md.scss 中（768px+）
+// @include media-breakpoint-up(md) {
+//   .responsive-card {
+//     padding: $spacing-lg;
+//     font-size: $font-size-base;
+//   }
+// }
+
+// 在 _lg.scss 中（1024px+）
+// @include media-breakpoint-up(lg) {
+//   .responsive-card {
+//     padding: $spacing-xl;
+//     font-size: $font-size-lg;
+//   }
+// }
+
+// HTML 使用：
+// <div class="responsive-card">内容</div>
+// 这个 class 会自动在不同断点下应用不同的样式
+
+// ============================================
+// 方式 2：使用不同的 class 名称
+// ============================================
+
+// 在 _xs.scss 中
+// .card-mobile {
+//   display: block;
+// }
+
+// 在 _md.scss 中
+// @include media-breakpoint-up(md) {
+//   .card-desktop {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
+
+// HTML 使用：
+// <div class="card-mobile card-desktop">内容</div>
+// 在移动端显示 block，在桌面端显示 grid
+
+// ============================================
+// 方式 3：使用 Bootstrap 的响应式工具类
+// ============================================
+
+// 在 HTML 中直接使用 Bootstrap 的响应式类：
+// <div class="d-none d-md-block">
+//   在移动端隐藏，在 md 及以上显示
+// </div>
+//
+// <div class="text-center text-md-left">
+//   移动端居中，md 及以上左对齐
+// </div>
+

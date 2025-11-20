@@ -1,0 +1,16 @@
+// ============================================
+// XXL 断点样式 (1920px+)
+// ============================================
+// 用途：超大桌面设备的样式
+// 断点：1920px 及以上
+// 修改位置：本文件
+// 使用：@include media-breakpoint-up(xxl) { ... }
+
+@include media-breakpoint-up(xxl) {
+  // 示例：XXL 断点的自定义样式
+  // .my-component {
+  //   font-size: $font-size-3xl;
+  //   padding: $spacing-xxl;
+  // }
+}
+

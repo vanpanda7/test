@@ -1,511 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="T1 Energy - Industry Leading TOPCon Solar Technology" />
-    <title>T1 Energy - TOPCon Solar Technology</title>
-    <!-- SCSS Styles -->
-    <link rel="stylesheet" href="./static/css/main.css" />
-  </head>
-
-  <body>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <!-- Hero Background Image - 全尺寸高度 -->
-      <div class="hero-bg">
-        <img 
-          src="static/images/image-1.png" 
-          alt="Solar Panel Background" 
-        />
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCSS + Bootstrap 项目</title>
+  
+  <!-- 引入编译后的 CSS -->
+  <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="full-width-section">
+      <a class="navbar-brand" href="#">我的项目</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">首页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">关于</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">联系</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
 
-      <!-- Header Navigation - 绝对定位在Hero Section上层 -->
-      <header>
-        <nav>
-          <!-- Logo -->
-          <div class="logo">
-            <a href="/">
-              <img src="static/images/logo.png" alt="T1 Energy Logo" />
-            </a>
+  <!-- 主要内容 -->
+  <main class="full-width-section my-5">
+    <h1 class="display-4 mb-4">欢迎使用 SCSS + Bootstrap</h1>
+    <p class="lead mb-5">这是一个集成了 SCSS 和 Bootstrap 的项目模板。</p>
+
+    <!-- 卡片网格 -->
+    <div class="full-width-grid mb-5">
+      <div class="custom-col custom-col-2 custom-col-sm-2 custom-col-md-4 custom-col-lg-4 custom-col-xl-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap 5</h5>
+            <p class="card-text">使用最新版本的 Bootstrap 5.3.3，包含完整的组件和工具类。</p>
+            <a href="#" class="btn btn-primary">了解更多</a>
           </div>
-
-          <!-- Navigation Links -->
-          <div class="nav-links">
-            <a href="/technology/">Technology</a>
-            <a href="/manufacturing/">Manufacturing</a>
-            <a href="/company/">Company</a>
-            <a href="https://ir.t1energy.com/">Investors</a>
+        </div>
+      </div>
+      <div class="custom-col custom-col-2 custom-col-sm-2 custom-col-md-4 custom-col-lg-4 custom-col-xl-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">SCSS 支持</h5>
+            <p class="card-text">使用 SCSS 编写样式，支持变量、嵌套、混入等高级特性。</p>
+            <a href="#" class="btn btn-secondary">了解更多</a>
           </div>
-
-          <!-- Contact Button -->
-          <div class="contact-btn">
-            <button class="btn-contact">Contact</button>
+        </div>
+      </div>
+      <div class="custom-col custom-col-2 custom-col-sm-2 custom-col-md-4 custom-col-lg-4 custom-col-xl-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">自定义配置</h5>
+            <p class="card-text">可以自定义 Bootstrap 的断点、颜色、字体等变量。</p>
+            <a href="#" class="btn btn-success">了解更多</a>
           </div>
-        </nav>
-      </header>
+        </div>
+      </div>
+    </div>
 
-      <!-- Hero Content Overlay -->
-      <div class="hero-content">
-        <div class="content-wrapper">
-          <!-- Content Frame: column layout, gap: 16px, padding: 64px 0px -->
-          <div class="content-frame">
-            <!-- Hero Title - display/small: 36px, lineHeight: 1.222, fontWeight: 380 -->
-            <h1>Industry Leading TOPCon Solar</h1>
-            <!-- Button - height: 48px -->
-            <button class="discover-btn">Discover</button>
+    <!-- 自定义样式示例 -->
+    <section class="full-width-section bg-light p-4 rounded mb-5">
+      <h2 class="mb-4">自定义样式示例</h2>
+      <p>这是一个使用全宽布局的示例区域。</p>
+      <button class="btn btn-custom btn-primary">自定义按钮</button>
+    </section>
+
+    <!-- 全宽布局示例（不用容器） -->
+    <section class="full-width-section bg-light py-5 mt-5">
+      <h2 class="mb-4 text-center">全宽布局示例（不使用容器）</h2>
+      <p class="text-center text-muted mb-4">
+        这个区域占满整个页面宽度，直接根据视口宽度响应式调整内边距
+      </p>
+      <div class="full-width-grid">
+        <div class="custom-col custom-col-2 custom-col-sm-3 custom-col-md-4 custom-col-lg-5 custom-col-xl-6">
+          <div class="bg-primary text-white p-3 rounded text-center">
+            <strong>全宽列 1</strong>
+          </div>
+        </div>
+        <div class="custom-col custom-col-2 custom-col-sm-3 custom-col-md-4 custom-col-lg-5 custom-col-xl-6">
+          <div class="bg-success text-white p-3 rounded text-center">
+            <strong>全宽列 2</strong>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Module 2: Separator Image -->
-    <section class="separator-section">
-      <div class="separator-wrapper">
-        <div class="separator-content">
-          <!-- 分隔图片 - 使用占位图片，实际应该从Figma导出SVG -->
-          <div class="separator-image">
-            <img src="static/images/image-11.png" alt="Separator" />
+    <!-- 自定义网格系统示例 -->
+    <section class="full-width-section">
+      <h2 class="mb-4">自定义网格系统 - 不同断点使用不同列数</h2>
+      <p class="text-muted mb-4">
+        这个网格系统在不同断点使用不同的总列数：
+        <br>xs (0px+): 4列 | sm (393px+): 6列 | md (768px+): 8列 | lg (1024px+): 10列 | xl (1440px+): 12列
+      </p>
+      
+      <!-- 自定义网格示例 -->
+      <div class="custom-grid mb-4">
+        <div class="custom-col custom-col-2 custom-col-sm-3 custom-col-md-4 custom-col-lg-5 custom-col-xl-6">
+          <div class="bg-primary text-white p-3 rounded text-center">
+            <strong>列 1</strong>
+            <br><small>xs: 2/4 | sm: 3/6 | md: 4/8 | lg: 5/10 | xl: 6/12</small>
+          </div>
+        </div>
+        <div class="custom-col custom-col-2 custom-col-sm-3 custom-col-md-4 custom-col-lg-5 custom-col-xl-6">
+          <div class="bg-success text-white p-3 rounded text-center">
+            <strong>列 2</strong>
+            <br><small>xs: 2/4 | sm: 3/6 | md: 4/8 | lg: 5/10 | xl: 6/12</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-grid mb-4">
+        <div class="custom-col custom-col-1 custom-col-sm-2 custom-col-md-2 custom-col-lg-2 custom-col-xl-3">
+          <div class="bg-info text-white p-3 rounded text-center">
+            <strong>1</strong>
+          </div>
+        </div>
+        <div class="custom-col custom-col-1 custom-col-sm-2 custom-col-md-2 custom-col-lg-2 custom-col-xl-3">
+          <div class="bg-warning text-dark p-3 rounded text-center">
+            <strong>2</strong>
+          </div>
+        </div>
+        <div class="custom-col custom-col-1 custom-col-sm-2 custom-col-md-2 custom-col-lg-2 custom-col-xl-3">
+          <div class="bg-danger text-white p-3 rounded text-center">
+            <strong>3</strong>
+          </div>
+        </div>
+        <div class="custom-col custom-col-1 custom-col-sm-2 custom-col-md-2 custom-col-lg-2 custom-col-xl-3">
+          <div class="bg-secondary text-white p-3 rounded text-center">
+            <strong>4</strong>
           </div>
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- Section Title -->
-    <section class="section-title">
-      <div class="title-wrapper">
-        <!-- Section Title - 768px 使用 headline/small, 1024px+ 使用 display/medium -->
-        <h2>
-          Two form factors.<br />
-          Powerful possibilities.
-        </h2>
-      </div>
-    </section>
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="full-width-section">
+      <p class="mb-0">&copy; 2025 我的项目. 保留所有权利.</p>
+    </div>
+  </footer>
 
-    <!-- Products Section -->
-    <section class="products-section">
-      <div class="products-wrapper">
-        <div class="products-grid">
-          <!-- Utility Product Card -->
-          <div class="product-card">
-            <div class="product-image">
-              <img 
-                src="static/images/image-2.png" 
-                alt="Utility Solar Panel" 
-              />
-            </div>
-            <div class="product-content">
-              <div class="product-header">
-                <h3>Utility</h3>
-                <span class="product-badge">600W</span>
-              </div>
-              <p class="product-specs">
-                238 cm x 113 cm x 3 cm
-              </p>
-              <p class="product-description">
-                A utility-scale workhorse designed for decades of highly efficient electrical output. Designed for solar farms.
-              </p>
-            </div>
-          </div>
-
-          <!-- Residential Product Card -->
-          <div class="product-card dark">
-            <div class="product-image">
-              <img 
-                src="static/images/image-3.png" 
-                alt="Residential Solar Panel" 
-              />
-            </div>
-            <div class="product-content">
-              <div class="product-header">
-                <h3>Residential</h3>
-                <span class="product-badge">430W</span>
-              </div>
-              <p class="product-specs">
-                176 cm x 113 cm x 3.5 cm
-              </p>
-              <p class="product-description">
-                One-sided modules with high-density technology deliver considerable output for their small size
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section Divider (Spacer) -->
-    <div class="section-divider"></div>
-
-    <!-- Module 5: Efficiency Section -->
-    <section class="efficiency-section">
-      <div class="efficiency-wrapper">
-        <!-- 模块5整体是垂直列布局，gap: 64px -->
-        <div class="efficiency-content">
-          <!-- 标题区域 -->
-          <div class="efficiency-title">
-            <div class="title-label">
-              <div class="label-bar"></div>
-              <span class="label-text">Efficiency</span>
-            </div>
-            <h2>Better Technology. Higher Conversion.</h2>
-          </div>
-          
-          <!-- 数据卡片区域 - 垂直排列，每个卡片是横向布局 -->
-          <div class="efficiency-cards">
-            <!-- Efficiency Card 1: 23% -->
-            <div class="efficiency-card">
-              <div class="card-spacer"></div>
-              <div class="card-content">
-                <p class="card-value">
-                  23<span>%</span>
-                </p>
-                <p class="card-label">Module Maximum Efficiency</p>
-              </div>
-            </div>
-
-            <!-- Efficiency Card 2: +27% -->
-            <div class="efficiency-card">
-              <div class="card-spacer"></div>
-              <div class="card-content">
-                <p class="card-value">
-                  +27<span>%</span>
-                </p>
-                <p class="card-label">Electricity produced per acre vs competitor</p>
-              </div>
-            </div>
-
-            <!-- Efficiency Card 3: +70 MWh -->
-            <div class="efficiency-card">
-              <div class="card-spacer"></div>
-              <div class="card-content">
-                <p class="card-value">
-                  +70<span> MWh</span>
-                </p>
-                <p class="card-label">Electricity produced per acre vs competitor</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section Divider (Spacer) -->
-    <div class="section-divider"></div>
-
-    <!-- Module 6: Durability Section -->
-    <section class="durability-section">
-      <div class="durability-wrapper">
-        <div class="durability-label">
-          <div class="label-bar"></div>
-          <span class="label-text">Durability</span>
-        </div>
-        <h2>
-          T1 Energy produces ground-mounted modules with a 30-year power warranty.
-        </h2>
-      </div>
-    </section>
-
-    <!-- Section Divider (Spacer) -->
-    <div class="section-divider"></div>
-
-    <!-- Module 7: Technology Features Section -->
-    <section class="technology-section">
-      <div class="technology-wrapper">
-        <div class="technology-grid">
-          <!-- Feature Card 1 -->
-          <div class="feature-card">
-            <div class="feature-image">
-              <img src="static/images/image-4.png" alt="N Type Silicon" />
-            </div>
-            <div class="feature-content">
-              <div class="feature-header">
-                <span class="feature-title">N Type Silicon</span>
-                <div class="feature-icon">
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Feature Card 2 -->
-          <div class="feature-card">
-            <div class="feature-image">
-              <img src="static/images/image-5.png" alt="Bi-Facial Glass/Glass Modules" />
-            </div>
-            <div class="feature-content">
-              <div class="feature-header">
-                <span class="feature-title">Bi-Facial Glass/Glass Modules</span>
-                <div class="feature-icon">
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Feature Card 3 -->
-          <div class="feature-card">
-            <div class="feature-image">
-              <img src="static/images/image-6.png" alt="Bypass Diodes" />
-            </div>
-            <div class="feature-content">
-              <div class="feature-header">
-                <span class="feature-title">Bypass Diodes</span>
-                <div class="feature-icon">
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Feature Card 4 -->
-          <div class="feature-card">
-            <div class="feature-image">
-              <img src="static/images/image-7.png" alt="Half-cut cells" />
-            </div>
-            <div class="feature-content">
-              <div class="feature-header">
-                <span class="feature-title">Half-cut cells</span>
-                <div class="feature-icon">
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section Divider (Spacer) -->
-    <div class="section-divider"></div>
-
-    <!-- Module 8: Supply Chain Commitment Section -->
-    <section class="supply-chain-section">
-      <div class="supply-chain-wrapper">
-        <div class="supply-chain-card">
-          <div class="supply-chain-grid">
-            <div class="supply-chain-image">
-              <img src="static/images/image-8.png" alt="Supply Chain" />
-            </div>
-            <div class="supply-chain-content">
-              <div class="supply-chain-header">
-                <div class="header-icon">
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <p>
-                  T1's commitment: Build a future domestic supply chain from raw materials abundantly found in the USA
-                </p>
-              </div>
-              <div class="supply-chain-list">
-                <div class="supply-item">
-                  <div class="item-dot"></div>
-                  <span>Glass</span>
-                </div>
-                <div class="supply-item">
-                  <div class="item-dot"></div>
-                  <span>Aluminum</span>
-                </div>
-                <div class="supply-item">
-                  <div class="item-dot"></div>
-                  <span>Silicon</span>
-                </div>
-                <div class="supply-item">
-                  <div class="item-dot"></div>
-                  <span>EVA</span>
-                </div>
-                <div class="supply-item">
-                  <div class="item-dot"></div>
-                  <span>Rubber</span>
-                </div>
-                <div class="supply-item">
-                  <div class="item-dot"></div>
-                  <span>Copper</span>
-                </div>
-                <div class="supply-item">
-                  <div class="item-dot"></div>
-                  <span>Silver</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section Divider (Spacer) -->
-    <div class="section-divider"></div>
-
-    <!-- Module 9: Factory/Location Section -->
-    <section class="factory-section">
-      <div class="factory-wrapper">
-        <div class="factory-card">
-          <div class="factory-image">
-            <img src="static/images/image-9.png" alt="G1 Dallas Factory" />
-            <div class="image-overlay"></div>
-            <div class="factory-content">
-              <h2>G1_Dallas</h2>
-              <div class="factory-stats">
-                <div class="stat-card">
-                  <p>32.60157°N，-96.70376°W</p>
-                </div>
-                <div class="stat-card">
-                  <p class="stat-value">5GW/year</p>
-                  <p class="stat-label">SOLAR MODULE PRODUCTION CAPACITY</p>
-                </div>
-                <div class="stat-card">
-                  <p class="stat-value">12,000/day</p>
-                  <p class="stat-label">AVG PANEL PRODUCED</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section Divider (Spacer) -->
-    <div class="section-divider"></div>
-
-    <!-- Module 10: Subscribe Section -->
-    <section class="subscribe-section">
-      <div class="subscribe-wrapper">
-        <div class="subscribe-card">
-          <div class="subscribe-image">
-            <img src="static/images/image-10.png" alt="Join the movement" />
-            <div class="image-overlay"></div>
-            <div class="subscribe-content">
-              <div class="content-box">
-                <h2>Join the movement</h2>
-                <div class="subscribe-form">
-                  <div class="form-group">
-                    <input 
-                      type="email" 
-                      placeholder="Enter your email address" 
-                    />
-                    <button class="btn-subscribe">Subscribe</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="footer-wrapper">
-        <!-- Footer Navigation Grid -->
-        <div class="footer-nav">
-          <!-- Column 1: About -->
-          <div>
-            <nav>
-              <div class="nav-item">
-                <span class="nav-number">1.1</span>
-                <a href="/about/">ABOUT</a>
-              </div>
-              <div class="nav-item">
-                <span class="nav-number">1.2</span>
-                <a href="/technology/">TECHNOLOGY</a>
-              </div>
-              <div class="nav-item">
-                <span class="nav-number">1.3</span>
-                <a href="/manufacturing/">MANUFACTURING</a>
-              </div>
-              <div class="nav-item">
-                <span class="nav-number">1.4</span>
-                <a href="/company/">COMPANY</a>
-              </div>
-              <div class="nav-item">
-                <span class="nav-number">1.5</span>
-                <a href="/subscribe/">SUBSCRIBE</a>
-              </div>
-            </nav>
-          </div>
-
-          <!-- Column 2: Investors -->
-          <div>
-            <nav>
-              <div class="nav-item">
-                <span class="nav-number">2.1</span>
-                <a href="https://ir.t1energy.com/">INVESTORS</a>
-              </div>
-              <div class="nav-item">
-                <span class="nav-number">2.2</span>
-                <a href="/news/">NEWS</a>
-              </div>
-              <div class="nav-item">
-                <span class="nav-number">2.3</span>
-                <a href="/governance/">GOVERNANCE</a>
-              </div>
-            </nav>
-          </div>
-
-          <!-- Column 3: Social Media -->
-          <div>
-            <nav>
-              <div class="nav-item">
-                <span class="nav-number">3.1</span>
-                <a href="https://linkedin.com/company/t1energy" target="_blank">LINKEDIN</a>
-              </div>
-              <div class="nav-item">
-                <span class="nav-number">3.2</span>
-                <a href="https://twitter.com/t1energy" target="_blank">X [TWITTER]</a>
-              </div>
-              <div class="nav-item">
-                <span class="nav-number">3.3</span>
-                <a href="https://youtube.com/@t1energy" target="_blank">YOUTUBE</a>
-              </div>
-            </nav>
-          </div>
-
-          <!-- Column 4: Legal -->
-          <div>
-            <nav>
-              <div class="nav-item">
-                <span class="nav-number">4.1</span>
-                <a href="/terms/">TERMS OF USE</a>
-              </div>
-              <div class="nav-item">
-                <span class="nav-number">4.2</span>
-                <a href="/privacy/">PRIVACY POLICY</a>
-              </div>
-              <div class="nav-item">
-                <span class="nav-number">4.3</span>
-                <a href="/cookies/">COOKIES</a>
-              </div>
-            </nav>
-          </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-          <div class="footer-content">
-            <!-- Logo -->
-            <div class="footer-logo">
-              <img src="static/images/logo.png" alt="T1 Energy Logo" />
-            </div>
-            <!-- Copyright -->
-            <div class="footer-copyright">
-              <p>© 2025</p>
-              <p class="copyright-text">
-                All rights reserved, T1 Energy Inc.<br />
-                Austin, Texas, USA
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
+  <!-- Bootstrap JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
+

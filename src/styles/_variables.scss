@@ -1,0 +1,30 @@
+// ============================================
+// 全局变量定义
+// ============================================
+// 用途：定义项目中使用的全局变量
+// 修改位置：根据下方注释中的行号
+
+// 自定义颜色变量（用于项目自定义样式）
+$primary-color: #0d6efd;      // 主色
+$secondary-color: #6c757d;   // 次要色
+$text-color: #212529;        // 文本颜色
+$bg-color: #ffffff;          // 背景颜色
+
+// 间距变量
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-xxl: 4rem;
+
+// 字体大小变量
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 1.875rem;
+$font-size-4xl: 2.25rem;
+

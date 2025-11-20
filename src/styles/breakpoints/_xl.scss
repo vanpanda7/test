@@ -1,0 +1,16 @@
+// ============================================
+// XL 断点样式 (1440px+)
+// ============================================
+// 用途：大桌面设备的样式
+// 断点：1440px 及以上
+// 修改位置：本文件
+// 使用：@include media-breakpoint-up(xl) { ... }
+
+@include media-breakpoint-up(xl) {
+  // 示例：XL 断点的自定义样式
+  // .my-component {
+  //   font-size: $font-size-2xl;
+  //   padding: $spacing-xxl;
+  // }
+}
+
