@@ -18,10 +18,47 @@
 // 自定义样式
 // ============================================
 
+// ============================================
+// 基础样式重置
+// ============================================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: $font-family-base;
   color: $text-color;
   background-color: $bg-color;
+  overflow-x: hidden;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 393px;
+  margin: 0 auto;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
 }
 
 // ============================================
@@ -69,9 +106,9 @@ body {
 // 修改此配置后需要重新编译 SCSS
 $grid-columns-config: (
   xs: 4,   // 0px+ 使用 4 列
-  sm: 6,   // 393px+ 使用 6 列
-  md: 8,   // 768px+ 使用 8 列
-  lg: 10,  // 1024px+ 使用 10 列
+  sm: 4,   // 393px+ 使用 6 列
+  md: 12,   // 768px+ 使用 8 列
+  lg: 12,  // 1024px+ 使用 10 列
   xl: 12,  // 1440px+ 使用 12 列
   xxl: 12, // 1920px+ 使用 12 列
   xxxl: 12 // 2560px+ 使用 12 列

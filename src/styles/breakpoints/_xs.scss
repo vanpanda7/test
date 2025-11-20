@@ -1,31 +1,551 @@
 // ============================================
-// XS 断点样式 (0px+)
+// XS 断点样式 (0px+) - 移动端单页应用
 // ============================================
 // 用途：移动设备（最小屏幕）的样式
 // 断点：0px 及以上（基础样式，无媒体查询）
+// 页面宽度：393px
 // 修改位置：本文件
-// 注意：XS 断点不需要 @include media-breakpoint-up()，直接写样式即可
 
 // ============================================
-// 示例 1：基础样式（所有断点都会继承，除非被覆盖）
+// 1. 顶部 Banner 区
 // ============================================
-// .my-card {
-//   padding: $spacing-sm;
-//   font-size: $font-size-sm;
-//   background-color: $bg-color;
-// }
+.hero-banner {
+  background-color: $color-black;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-md $spacing-md $spacing-xl;
+  width: 100%;
+  max-width: 393px;
+  margin: 0 auto;
+}
+
+.hero-header {
+  width: 100%;
+  margin-bottom: $spacing-lg;
+}
+
+.hero-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  img {
+    height: 32px;
+    width: auto;
+  }
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 24px;
+  height: 18px;
+  
+  span {
+    width: 100%;
+    height: 2px;
+    background-color: $color-white;
+    transition: all 0.3s ease;
+  }
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: $spacing-lg;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto $spacing-md;
+  
+  img {
+    width: 100%;
+    height: auto;
+    transform: rotate(-15deg);
+    filter: drop-shadow(0 10px 30px rgba(0, 102, 255, 0.3));
+  }
+}
+
+.hero-title {
+  font-size: $font-size-2xl;
+  font-weight: 300;
+  color: $color-white;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: $spacing-md;
+  text-align: center;
+}
+
+.discover-btn {
+  background-color: $color-black;
+  color: $color-white;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: $font-size-base;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: $color-dark;
+  }
+  
+  &:active {
+    transform: scale(0.98);
+  }
+}
 
 // ============================================
-// 示例 2：只在移动端显示的样式
+// 2. 产品类型区
 // ============================================
-// .mobile-only {
-//   display: block;
-// }
-//
-// 然后在 _md.scss 中覆盖：
-// @include media-breakpoint-up(md) {
-//   .mobile-only {
-//     display: none;
-//   }
-// }
+.product-types {
+  background-color: $color-dark;
+  padding: $spacing-xl $spacing-md;
+  margin-top: 0; // 与 Banner 区无缝衔接
+}
 
+.section-title {
+  font-size: $font-size-xl;
+  font-weight: 400;
+  color: $color-white;
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  line-height: 1.4;
+}
+
+.product-card {
+  background-color: $color-black;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-lg;
+  border-radius: 0;
+  transition: background-color 0.3s ease;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  &:hover {
+    background-color: rgba(26, 26, 26, 0.8);
+  }
+}
+
+.product-specs {
+  margin-bottom: $spacing-md;
+}
+
+.product-power {
+  font-size: $font-size-3xl;
+  font-weight: 300;
+  color: $color-white;
+  margin-bottom: $spacing-xs;
+}
+
+.product-dimensions {
+  font-size: $font-size-sm;
+  color: $color-light-gray;
+}
+
+.product-name {
+  font-size: $font-size-xl;
+  font-weight: 400;
+  color: $color-white;
+  margin-bottom: $spacing-sm;
+}
+
+.product-description {
+  font-size: $font-size-base;
+  color: $color-white;
+  line-height: 1.6;
+  margin-bottom: $spacing-md;
+}
+
+.product-image {
+  width: 100%;
+  margin-top: $spacing-md;
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+}
+
+// ============================================
+// 3. 性能参数区
+// ============================================
+.performance-section {
+  background-color: $color-black;
+  padding: $spacing-xl $spacing-md;
+  margin-top: 0; // 与产品类型区无缝衔接
+}
+
+.performance-module {
+  margin-bottom: $spacing-xl;
+  text-align: center;
+  
+  &:last-of-type {
+    margin-bottom: $spacing-lg;
+  }
+}
+
+.module-label {
+  font-size: $font-size-xs;
+  font-weight: 600;
+  color: $color-light-gray;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: $spacing-sm;
+}
+
+.module-value {
+  font-size: $font-size-4xl;
+  font-weight: 300;
+  color: $color-white;
+  margin-bottom: $spacing-xs;
+}
+
+.module-description {
+  font-size: $font-size-sm;
+  color: $color-light-gray;
+  line-height: 1.5;
+}
+
+.tech-details {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  margin-top: $spacing-xl;
+  padding-top: $spacing-lg;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  
+  img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .tech-label {
+    font-size: $font-size-sm;
+    color: $color-white;
+    text-align: center;
+  }
+  
+  .tech-arrow {
+    font-size: $font-size-xl;
+    color: $color-blue;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+}
+
+// ============================================
+// 4. 组件结构区
+// ============================================
+.component-structure {
+  background-color: $color-dark;
+  padding: $spacing-xl $spacing-md;
+  margin-top: 0; // 与性能参数区无缝衔接
+}
+
+.structure-tech {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-lg;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  background-color: $color-black;
+  color: $color-white;
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-sm;
+  border-radius: 4px;
+}
+
+.structure-diagram {
+  width: 100%;
+  margin: $spacing-lg 0;
+  border: 2px solid $color-blue;
+  border-radius: 4px;
+  padding: $spacing-sm;
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.material-list {
+  border: 1px dashed $color-gray;
+  border-radius: 4px;
+  padding: $spacing-sm;
+  margin-top: $spacing-lg;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.material-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-sm;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.material-name {
+  font-size: $font-size-base;
+  color: $color-white;
+}
+
+.material-toggle {
+  font-size: $font-size-xl;
+  color: $color-white;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+
+// ============================================
+// 5. 工厂信息区
+// ============================================
+.factory-section {
+  background-color: $color-black;
+  padding: $spacing-xl $spacing-md;
+  margin-top: 0; // 与组件结构区无缝衔接
+}
+
+.location-map {
+  position: relative;
+  width: 100%;
+  margin-bottom: $spacing-lg;
+  border: 2px solid $color-blue;
+  border-radius: 4px;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .location-label {
+    position: absolute;
+    top: $spacing-sm;
+    left: $spacing-sm;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: $color-white;
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-sm;
+    border-radius: 4px;
+  }
+}
+
+.factory-stats {
+  background-color: rgba(102, 102, 102, 0.3);
+  padding: $spacing-lg;
+  border-radius: 4px;
+  margin-bottom: $spacing-lg;
+}
+
+.stats-label {
+  font-size: $font-size-sm;
+  font-weight: 600;
+  color: $color-white;
+  margin-bottom: $spacing-md;
+  letter-spacing: 1px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-md;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: $font-size-2xl;
+  font-weight: 300;
+  color: $color-white;
+  margin-bottom: $spacing-xs;
+}
+
+.stat-label {
+  font-size: $font-size-sm;
+  color: $color-light-gray;
+}
+
+.factory-image {
+  width: 100%;
+  margin-bottom: $spacing-lg;
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+}
+
+.subscribe-section {
+  text-align: center;
+}
+
+.subscribe-title {
+  font-size: $font-size-xl;
+  font-weight: 400;
+  color: $color-white;
+  margin-bottom: $spacing-md;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  max-width: 100%;
+  margin-top: $spacing-md;
+}
+
+.subscribe-input {
+  background-color: $color-dark;
+  color: $color-white;
+  border: 1px solid $color-gray;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 4px;
+  font-size: $font-size-base;
+  width: 100%;
+  
+  &::placeholder {
+    color: $color-light-gray;
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: $color-blue;
+  }
+}
+
+.subscribe-btn {
+  background-color: $color-white;
+  color: $color-black;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 4px;
+  font-size: $font-size-base;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: $color-light-gray;
+  }
+}
+
+// ============================================
+// 6. 页脚区
+// ============================================
+.site-footer {
+  background-color: $color-black;
+  padding: $spacing-xl $spacing-md;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 0; // 与工厂信息区无缝衔接
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-xl;
+}
+
+.footer-column {
+  .footer-title {
+    font-size: $font-size-sm;
+    font-weight: 600;
+    color: $color-white;
+    margin-bottom: $spacing-sm;
+    letter-spacing: 1px;
+  }
+}
+
+.footer-links {
+  li {
+    margin-bottom: $spacing-xs;
+    
+    a {
+      font-size: $font-size-sm;
+      color: $color-light-gray;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+  padding-top: $spacing-lg;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copyright {
+  text-align: center;
+  
+  p {
+    font-size: $font-size-xs;
+    color: $color-light-gray;
+    margin-bottom: $spacing-xs;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer-logo {
+  img {
+    height: 24px;
+    width: auto;
+    opacity: 0.8;
+  }
+}

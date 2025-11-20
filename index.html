@@ -1,153 +1,206 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SCSS + Bootstrap 项目</title>
+  <title>T1 Energy - Industry Leading TOPCon Solar</title>
   
   <!-- 引入编译后的 CSS -->
   <link rel="stylesheet" href="static/css/main.css">
 </head>
 <body>
-  <!-- 导航栏 -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="full-width-section">
-      <a class="navbar-brand" href="#">我的项目</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">首页</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">关于</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">联系</a>
-          </li>
+  <!-- 1. 顶部 Banner 区 -->
+  <section class="hero-banner">
+    <!-- 顶部导航 -->
+    <header class="hero-header">
+      <div class="hero-header-content">
+        <div class="logo">
+          <img src="static/images/logo.png" alt="T1 Energy Logo" />
+        </div>
+        <button class="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 中部内容 -->
+    <div class="hero-content">
+      <div class="hero-image">
+        <img src="static/images/image-1.png" alt="Solar Panel 3D Render" />
+      </div>
+      <h1 class="hero-title">Industry Leading TOPCon Solar</h1>
+      <button class="discover-btn">Discover</button>
+    </div>
+  </section>
+
+  <!-- 2. 产品类型区 -->
+  <section class="product-types">
+    <h2 class="section-title">Two form factors. Powerful possibilities.</h2>
+    
+    <!-- Utility 型号 -->
+    <div class="product-card">
+      <div class="product-specs">
+        <div class="product-power">600W</div>
+        <div class="product-dimensions">238cm × 113cm × 3.5cm</div>
+      </div>
+      <h3 class="product-name">Utility</h3>
+      <p class="product-description">Large-scale solar installations for commercial and industrial applications.</p>
+      <div class="product-image">
+        <img src="static/images/image-2.png" alt="Utility Solar Installation" />
+      </div>
+    </div>
+
+    <!-- Residential 型号 -->
+    <div class="product-card">
+      <div class="product-specs">
+        <div class="product-power">400W</div>
+        <div class="product-dimensions">200cm × 100cm × 3.5cm</div>
+      </div>
+      <h3 class="product-name">Residential</h3>
+      <p class="product-description">Residential solar solutions for homes and small businesses.</p>
+      <div class="product-image">
+        <img src="static/images/image-3.png" alt="Residential Roof Installation" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 性能参数区 -->
+  <section class="performance-section">
+    <div class="performance-module">
+      <div class="module-label">EFFICIENCY</div>
+      <div class="module-value">23%</div>
+      <div class="module-description">Industry-leading conversion efficiency</div>
+    </div>
+
+    <div class="performance-module">
+      <div class="module-label">DURABILITY</div>
+      <div class="module-value">+27%</div>
+      <div class="module-description">Enhanced durability compared to standard modules</div>
+    </div>
+
+    <div class="performance-module">
+      <div class="module-label">ENERGY OUTPUT</div>
+      <div class="module-value">+70MWh</div>
+      <div class="module-description">Additional energy output per installation</div>
+    </div>
+
+    <!-- 技术细节图 -->
+    <div class="tech-details">
+      <div class="tech-item">
+        <img src="static/images/image-4.png" alt="N Type Silicon" />
+        <div class="tech-label">N Type Silicon</div>
+        <div class="tech-arrow">→</div>
+      </div>
+      <div class="tech-item">
+        <img src="static/images/image-5.png" alt="Bi-Facial Glass/Glass Modules" />
+        <div class="tech-label">Bi-Facial Glass/Glass Modules</div>
+        <div class="tech-arrow">→</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 组件结构区 -->
+  <section class="component-structure">
+    <!-- 顶部技术细节 -->
+    <div class="structure-tech">
+      <div class="tech-badge">Bypass Diodes</div>
+      <div class="tech-badge">Half-cut cells</div>
+    </div>
+
+    <!-- 3D 分层示意图 -->
+    <div class="structure-diagram">
+      <img src="static/images/image-6.png" alt="Component Structure 3D" />
+    </div>
+
+    <!-- 可展开材质列表 -->
+    <div class="material-list">
+      <div class="material-item">
+        <span class="material-name">Glass</span>
+        <button class="material-toggle">+</button>
+      </div>
+      <div class="material-item">
+        <span class="material-name">Aluminum</span>
+        <button class="material-toggle">+</button>
+      </div>
+      <div class="material-item">
+        <span class="material-name">Silicon</span>
+        <button class="material-toggle">+</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 工厂信息区 -->
+  <section class="factory-section">
+    <!-- Dallas 区位图 -->
+    <div class="location-map">
+      <img src="static/images/image-7.png" alt="Dallas Location Map" />
+      <div class="location-label">Dallas</div>
+    </div>
+
+    <!-- G1_STATS 模块 -->
+    <div class="factory-stats">
+      <div class="stats-label">G1_STATS</div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-value">5GW/year</div>
+          <div class="stat-label">Production Capacity</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">12,000/day</div>
+          <div class="stat-label">Daily Output</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 工厂设备图 -->
+    <div class="factory-image">
+      <img src="static/images/image-8.png" alt="Factory Equipment" />
+    </div>
+
+    <!-- 订阅区域 -->
+    <div class="subscribe-section">
+      <h2 class="subscribe-title">Join the movement</h2>
+      <form class="subscribe-form">
+        <input type="email" class="subscribe-input" placeholder="Enter your email" />
+        <button type="submit" class="subscribe-btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 6. 页脚区 -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">TECHNOLOGY</a></li>
+          <li><a href="#">MANUFACTURING</a></li>
+          <li><a href="#">COMPANY</a></li>
+          <li><a href="#">INVESTORS</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="footer-title">Connect</h4>
+        <ul class="footer-links">
+          <li><a href="#">LINKEDIN</a></li>
+          <li><a href="#">TWITTER</a></li>
+          <li><a href="#">INSTAGRAM</a></li>
         </ul>
       </div>
     </div>
-  </nav>
 
-  <!-- 主要内容 -->
-  <main class="full-width-section my-5">
-    <h1 class="display-4 mb-4">欢迎使用 SCSS + Bootstrap</h1>
-    <p class="lead mb-5">这是一个集成了 SCSS 和 Bootstrap 的项目模板。</p>
-
-    <!-- 卡片网格 -->
-    <div class="full-width-grid mb-5">
-      <div class="custom-col custom-col-2 custom-col-sm-2 custom-col-md-4 custom-col-lg-4 custom-col-xl-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Bootstrap 5</h5>
-            <p class="card-text">使用最新版本的 Bootstrap 5.3.3，包含完整的组件和工具类。</p>
-            <a href="#" class="btn btn-primary">了解更多</a>
-          </div>
-        </div>
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <p>©2024 T Energy Inc.</p>
+        <p>123 Energy Street, Dallas, TX 75201</p>
       </div>
-      <div class="custom-col custom-col-2 custom-col-sm-2 custom-col-md-4 custom-col-lg-4 custom-col-xl-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">SCSS 支持</h5>
-            <p class="card-text">使用 SCSS 编写样式，支持变量、嵌套、混入等高级特性。</p>
-            <a href="#" class="btn btn-secondary">了解更多</a>
-          </div>
-        </div>
+      <div class="footer-logo">
+        <img src="static/images/logo.png" alt="T1 Energy Logo" />
       </div>
-      <div class="custom-col custom-col-2 custom-col-sm-2 custom-col-md-4 custom-col-lg-4 custom-col-xl-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">自定义配置</h5>
-            <p class="card-text">可以自定义 Bootstrap 的断点、颜色、字体等变量。</p>
-            <a href="#" class="btn btn-success">了解更多</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 自定义样式示例 -->
-    <section class="full-width-section bg-light p-4 rounded mb-5">
-      <h2 class="mb-4">自定义样式示例</h2>
-      <p>这是一个使用全宽布局的示例区域。</p>
-      <button class="btn btn-custom btn-primary">自定义按钮</button>
-    </section>
-
-    <!-- 全宽布局示例（不用容器） -->
-    <section class="full-width-section bg-light py-5 mt-5">
-      <h2 class="mb-4 text-center">全宽布局示例（不使用容器）</h2>
-      <p class="text-center text-muted mb-4">
-        这个区域占满整个页面宽度，直接根据视口宽度响应式调整内边距
-      </p>
-      <div class="full-width-grid">
-        <div class="custom-col custom-col-2 custom-col-sm-3 custom-col-md-4 custom-col-lg-5 custom-col-xl-6">
-          <div class="bg-primary text-white p-3 rounded text-center">
-            <strong>全宽列 1</strong>
-          </div>
-        </div>
-        <div class="custom-col custom-col-2 custom-col-sm-3 custom-col-md-4 custom-col-lg-5 custom-col-xl-6">
-          <div class="bg-success text-white p-3 rounded text-center">
-            <strong>全宽列 2</strong>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 自定义网格系统示例 -->
-    <section class="full-width-section">
-      <h2 class="mb-4">自定义网格系统 - 不同断点使用不同列数</h2>
-      <p class="text-muted mb-4">
-        这个网格系统在不同断点使用不同的总列数：
-        <br>xs (0px+): 4列 | sm (393px+): 6列 | md (768px+): 8列 | lg (1024px+): 10列 | xl (1440px+): 12列
-      </p>
-      
-      <!-- 自定义网格示例 -->
-      <div class="custom-grid mb-4">
-        <div class="custom-col custom-col-2 custom-col-sm-3 custom-col-md-4 custom-col-lg-5 custom-col-xl-6">
-          <div class="bg-primary text-white p-3 rounded text-center">
-            <strong>列 1</strong>
-            <br><small>xs: 2/4 | sm: 3/6 | md: 4/8 | lg: 5/10 | xl: 6/12</small>
-          </div>
-        </div>
-        <div class="custom-col custom-col-2 custom-col-sm-3 custom-col-md-4 custom-col-lg-5 custom-col-xl-6">
-          <div class="bg-success text-white p-3 rounded text-center">
-            <strong>列 2</strong>
-            <br><small>xs: 2/4 | sm: 3/6 | md: 4/8 | lg: 5/10 | xl: 6/12</small>
-          </div>
-        </div>
-      </div>
-
-      <div class="custom-grid mb-4">
-        <div class="custom-col custom-col-1 custom-col-sm-2 custom-col-md-2 custom-col-lg-2 custom-col-xl-3">
-          <div class="bg-info text-white p-3 rounded text-center">
-            <strong>1</strong>
-          </div>
-        </div>
-        <div class="custom-col custom-col-1 custom-col-sm-2 custom-col-md-2 custom-col-lg-2 custom-col-xl-3">
-          <div class="bg-warning text-dark p-3 rounded text-center">
-            <strong>2</strong>
-          </div>
-        </div>
-        <div class="custom-col custom-col-1 custom-col-sm-2 custom-col-md-2 custom-col-lg-2 custom-col-xl-3">
-          <div class="bg-danger text-white p-3 rounded text-center">
-            <strong>3</strong>
-          </div>
-        </div>
-        <div class="custom-col custom-col-1 custom-col-sm-2 custom-col-md-2 custom-col-lg-2 custom-col-xl-3">
-          <div class="bg-secondary text-white p-3 rounded text-center">
-            <strong>4</strong>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- 页脚 -->
-  <footer class="bg-dark text-white text-center py-4 mt-5">
-    <div class="full-width-section">
-      <p class="mb-0">&copy; 2025 我的项目. 保留所有权利.</p>
     </div>
   </footer>
 
@@ -155,4 +208,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

@@ -4,11 +4,21 @@
 // 用途：定义项目中使用的全局变量
 // 修改位置：根据下方注释中的行号
 
+// ============================================
+// 项目颜色变量 - 极简工业风（黑灰白+蓝色强调）
+// ============================================
+$color-black: #000000;        // 黑色
+$color-dark: #1a1a1a;        // 深灰色
+$color-gray: #666666;        // 中灰色
+$color-light-gray: #999999;  // 浅灰色
+$color-white: #ffffff;       // 白色
+$color-blue: #0066ff;        // 蓝色强调色
+
 // 自定义颜色变量（用于项目自定义样式）
-$primary-color: #0d6efd;      // 主色
-$secondary-color: #6c757d;   // 次要色
-$text-color: #212529;        // 文本颜色
-$bg-color: #ffffff;          // 背景颜色
+$primary-color: $color-blue;      // 主色（蓝色）
+$secondary-color: $color-gray;    // 次要色（灰色）
+$text-color: $color-white;        // 文本颜色（白色）
+$bg-color: $color-black;          // 背景颜色（黑色）
 
 // 间距变量
 $spacing-xs: 0.5rem;
