@@ -1,210 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>T1 Energy - Industry Leading TOPCon Solar</title>
-  
-  <!-- 引入编译后的 CSS -->
-  <link rel="stylesheet" href="static/css/main.css">
-</head>
-<body>
-  <!-- 1. 顶部 Banner 区 -->
-  <section class="hero-banner">
-    <!-- 顶部导航 -->
-    <header class="hero-header">
-      <div class="hero-header-content">
-        <div class="logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T1 Energy - Industry Leading TOPCon Solar</title>
+
+    <!-- 引入编译后的 CSS -->
+    <link rel="stylesheet" href="static/css/main.css" />
+  </head>
+  <body>
+    <!-- 1. 顶部 Banner 区 -->
+    <section class="hero-banner">
+      <!-- 顶部导航 -->
+      <header class="hero-header">
+        <div class="hero-header-content">
+          <div class="logo">
+            <img src="static/images/logo.png" alt="T1 Energy Logo" />
+          </div>
+          <button class="menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- 中部内容 -->
+      <div class="hero-content padding-4">
+        <div class="hero-image">
+          <img src="static/images/image-1.png" alt="Solar Panel 3D Render" />
+        </div>
+        <h1 class="hero-title">Industry Leading TOPCon Solar</h1>
+        <button class="discover-btn">Discover</button>
+      </div>
+    </section>
+
+    <section class="box2">
+      <div class="box2-content padding-4 custom-grid">
+        <div class="box2-content-cell custom-col">
+          <img src="static/images/image-2.png" alt="Solar Panel Close-up" />
+        </div>
+        <div class="box2-content-cell custom-col">
+          <img src="static/images/image-3.png" alt="Solar Panel Close-up" />
+        </div>
+      </div>
+    </section>
+
+    <section class="box3 padding-4">
+      <p class="box3_title">Two form factors.</p>
+      <p class="box3_title2">Powerful possibilities.</p>
+    </section>
+
+    <section class="box4 custom-grid padding-4">
+      <!-- Utility 卡片 -->
+      <div class="product-card utility-card custom-col">
+        <div class="product-info">
+          <div class="product-title">
+            <h3>Utility</h3>
+            <span class="power-rating">600W</span>
+          </div>
+          <div class="product-dimensions">238 cm × 113 cm × 3 cm</div>
+          <p class="product-description">
+            A utility-scale workhorse designed for decades of highly efficient
+            electrical output. Designed for solar farms.
+          </p>
+        </div>
+        <img src="static/images/image 4781.png" alt="Solar Panel Close-up" />
+      </div>
+
+      <div class="product-card residential-card custom-col">
+        <div class="product-info">
+          <div class="product-title">
+            <h3>Residential</h3>
+            <span class="power-rating">430W</span>
+          </div>
+          <div class="product-dimensions">176 cm x 113 cm x 3.5 cm</div>
+          <p class="product-description">
+            One-sided modules with high-density technology deliver considerable output for their small size
+          </p>
+        </div>
+        <img src="static/images/image 4782.png" alt="Solar Panel Close-up" />
+      </div>
+    </section>
+
+    <!-- 6. 页脚区 -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">TECHNOLOGY</a></li>
+            <li><a href="#">MANUFACTURING</a></li>
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">INVESTORS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="#">LINKEDIN</a></li>
+            <li><a href="#">TWITTER</a></li>
+            <li><a href="#">INSTAGRAM</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>©2024 T Energy Inc.</p>
+          <p>123 Energy Street, Dallas, TX 75201</p>
+        </div>
+        <div class="footer-logo">
           <img src="static/images/logo.png" alt="T1 Energy Logo" />
         </div>
-        <button class="menu-toggle" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
-    </header>
+    </footer>
 
-    <!-- 中部内容 -->
-    <div class="hero-content">
-      <div class="hero-image">
-        <img src="static/images/image-1.png" alt="Solar Panel 3D Render" />
-      </div>
-      <h1 class="hero-title">Industry Leading TOPCon Solar</h1>
-      <button class="discover-btn">Discover</button>
-    </div>
-  </section>
-
-  <!-- 2. 产品类型区 -->
-  <section class="product-types">
-    <h2 class="section-title">Two form factors. Powerful possibilities.</h2>
-    
-    <!-- Utility 型号 -->
-    <div class="product-card">
-      <div class="product-specs">
-        <div class="product-power">600W</div>
-        <div class="product-dimensions">238cm × 113cm × 3.5cm</div>
-      </div>
-      <h3 class="product-name">Utility</h3>
-      <p class="product-description">Large-scale solar installations for commercial and industrial applications.</p>
-      <div class="product-image">
-        <img src="static/images/image-2.png" alt="Utility Solar Installation" />
-      </div>
-    </div>
-
-    <!-- Residential 型号 -->
-    <div class="product-card">
-      <div class="product-specs">
-        <div class="product-power">400W</div>
-        <div class="product-dimensions">200cm × 100cm × 3.5cm</div>
-      </div>
-      <h3 class="product-name">Residential</h3>
-      <p class="product-description">Residential solar solutions for homes and small businesses.</p>
-      <div class="product-image">
-        <img src="static/images/image-3.png" alt="Residential Roof Installation" />
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. 性能参数区 -->
-  <section class="performance-section">
-    <div class="performance-module">
-      <div class="module-label">EFFICIENCY</div>
-      <div class="module-value">23%</div>
-      <div class="module-description">Industry-leading conversion efficiency</div>
-    </div>
-
-    <div class="performance-module">
-      <div class="module-label">DURABILITY</div>
-      <div class="module-value">+27%</div>
-      <div class="module-description">Enhanced durability compared to standard modules</div>
-    </div>
-
-    <div class="performance-module">
-      <div class="module-label">ENERGY OUTPUT</div>
-      <div class="module-value">+70MWh</div>
-      <div class="module-description">Additional energy output per installation</div>
-    </div>
-
-    <!-- 技术细节图 -->
-    <div class="tech-details">
-      <div class="tech-item">
-        <img src="static/images/image-4.png" alt="N Type Silicon" />
-        <div class="tech-label">N Type Silicon</div>
-        <div class="tech-arrow">→</div>
-      </div>
-      <div class="tech-item">
-        <img src="static/images/image-5.png" alt="Bi-Facial Glass/Glass Modules" />
-        <div class="tech-label">Bi-Facial Glass/Glass Modules</div>
-        <div class="tech-arrow">→</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. 组件结构区 -->
-  <section class="component-structure">
-    <!-- 顶部技术细节 -->
-    <div class="structure-tech">
-      <div class="tech-badge">Bypass Diodes</div>
-      <div class="tech-badge">Half-cut cells</div>
-    </div>
-
-    <!-- 3D 分层示意图 -->
-    <div class="structure-diagram">
-      <img src="static/images/image-6.png" alt="Component Structure 3D" />
-    </div>
-
-    <!-- 可展开材质列表 -->
-    <div class="material-list">
-      <div class="material-item">
-        <span class="material-name">Glass</span>
-        <button class="material-toggle">+</button>
-      </div>
-      <div class="material-item">
-        <span class="material-name">Aluminum</span>
-        <button class="material-toggle">+</button>
-      </div>
-      <div class="material-item">
-        <span class="material-name">Silicon</span>
-        <button class="material-toggle">+</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. 工厂信息区 -->
-  <section class="factory-section">
-    <!-- Dallas 区位图 -->
-    <div class="location-map">
-      <img src="static/images/image-7.png" alt="Dallas Location Map" />
-      <div class="location-label">Dallas</div>
-    </div>
-
-    <!-- G1_STATS 模块 -->
-    <div class="factory-stats">
-      <div class="stats-label">G1_STATS</div>
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-value">5GW/year</div>
-          <div class="stat-label">Production Capacity</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">12,000/day</div>
-          <div class="stat-label">Daily Output</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 工厂设备图 -->
-    <div class="factory-image">
-      <img src="static/images/image-8.png" alt="Factory Equipment" />
-    </div>
-
-    <!-- 订阅区域 -->
-    <div class="subscribe-section">
-      <h2 class="subscribe-title">Join the movement</h2>
-      <form class="subscribe-form">
-        <input type="email" class="subscribe-input" placeholder="Enter your email" />
-        <button type="submit" class="subscribe-btn">Subscribe</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- 6. 页脚区 -->
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-column">
-        <h4 class="footer-title">Navigation</h4>
-        <ul class="footer-links">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">TECHNOLOGY</a></li>
-          <li><a href="#">MANUFACTURING</a></li>
-          <li><a href="#">COMPANY</a></li>
-          <li><a href="#">INVESTORS</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4 class="footer-title">Connect</h4>
-        <ul class="footer-links">
-          <li><a href="#">LINKEDIN</a></li>
-          <li><a href="#">TWITTER</a></li>
-          <li><a href="#">INSTAGRAM</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="footer-copyright">
-        <p>©2024 T Energy Inc.</p>
-        <p>123 Energy Street, Dallas, TX 75201</p>
-      </div>
-      <div class="footer-logo">
-        <img src="static/images/logo.png" alt="T1 Energy Logo" />
-      </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JavaScript Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
