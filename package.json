@@ -7,10 +7,10 @@
     "build-scss-prod": "sass src/styles/main.scss static/css/main.css --style compressed --quiet-deps"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "element-ui": "^2.15.14"
   },
   "devDependencies": {
     "sass": "^1.94.1"
   }
 }
-

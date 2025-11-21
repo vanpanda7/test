@@ -8,7 +8,7 @@
     <!-- 引入编译后的 CSS -->
     <link rel="stylesheet" href="static/css/main.css" />
   </head>
-  <body>
+  <body id="app">
     <!-- 1. 顶部 Banner 区 -->
     <section class="hero-banner">
       <!-- 顶部导航 -->
@@ -35,8 +35,8 @@
       </div>
     </section>
 
-    <section class="box2">
-      <div class="box2-content padding-4 custom-grid">
+    <section class="box2 padding-4">
+      <div class="box2-content custom-grid">
         <div class="box2-content-cell custom-col">
           <img src="static/images/image-2.png" alt="Solar Panel Close-up" />
         </div>
@@ -51,36 +51,163 @@
       <p class="box3_title2">Powerful possibilities.</p>
     </section>
 
-    <section class="box4 custom-grid padding-4">
+    <section class="box4 padding-4">
       <!-- Utility 卡片 -->
-      <div class="product-card utility-card custom-col">
-        <div class="product-info">
-          <div class="product-title">
-            <h3>Utility</h3>
-            <span class="power-rating">600W</span>
+      <div class="custom-grid">
+        <div class="product-card utility-card custom-col">
+          <div class="product-info">
+            <div class="product-title">
+              <h3>Utility</h3>
+              <span class="power-rating">600W</span>
+            </div>
+            <div class="product-dimensions">238 cm × 113 cm × 3 cm</div>
+            <p class="product-description">
+              A utility-scale workhorse designed for decades of highly efficient
+              electrical output. Designed for solar farms.
+            </p>
           </div>
-          <div class="product-dimensions">238 cm × 113 cm × 3 cm</div>
-          <p class="product-description">
-            A utility-scale workhorse designed for decades of highly efficient
-            electrical output. Designed for solar farms.
-          </p>
+          <img src="static/images/image 4781.png" alt="Solar Panel Close-up" />
         </div>
-        <img src="static/images/image 4781.png" alt="Solar Panel Close-up" />
-      </div>
 
-      <div class="product-card residential-card custom-col">
-        <div class="product-info">
-          <div class="product-title">
-            <h3>Residential</h3>
-            <span class="power-rating">430W</span>
+        <div class="product-card residential-card custom-col">
+          <div class="product-info">
+            <div class="product-title">
+              <h3>Residential</h3>
+              <span class="power-rating">430W</span>
+            </div>
+            <div class="product-dimensions">176 cm x 113 cm x 3.5 cm</div>
+            <p class="product-description">
+              One-sided modules with high-density technology deliver
+              considerable output for their small size
+            </p>
           </div>
-          <div class="product-dimensions">176 cm x 113 cm x 3.5 cm</div>
-          <p class="product-description">
-            One-sided modules with high-density technology deliver considerable output for their small size
-          </p>
+          <img src="static/images/image 4782.png" alt="Solar Panel Close-up" />
         </div>
-        <img src="static/images/image 4782.png" alt="Solar Panel Close-up" />
       </div>
+    </section>
+
+    <section class="box5 padding-4">
+      <div class="box5_content">
+        <p class="box5_tag"><span class="box5_icon"></span> Efficiency</p>
+        <p class="box5_one_p">Better Technology. Higher Conversion.</p>
+      </div>
+      <div class="box5_content">
+        <p class="box5_title">23%</p>
+        <p class="box5_p">Module Maximum Efficiency</p>
+      </div>
+      <div class="box5_content">
+        <p class="box5_title">+27%</p>
+        <p class="box5_p">Electricity produced per acre vs competitor</p>
+      </div>
+      <div class="box5_content">
+        <p class="box5_title">+ 70 MWh</p>
+        <p class="box5_p">Electricity produced per acre vs competitor</p>
+      </div>
+    </section>
+
+    <section class="box6 padding-4">
+      <div class="box6_content">
+        <p class="box6_tag"><span class="box6_icon"></span> Durability</p>
+      </div>
+      <div class="box6_content">
+        <p class="box6_p">
+          T1 Energy produces ground-mounted modules with a 30-year power
+          warranty.
+        </p>
+      </div>
+    </section>
+
+    <section class="box7 padding-4">
+      <div class="custom-grid">
+        <div class="custom-col">
+          <img src="static/images/image-6.png" alt="" />
+          <div class="box7_overlay">
+            <span class="box7_p">N Type Silicon</span>
+            <button class="box7_icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="custom-col">
+          <img src="static/images/image-7.png" alt="" />
+          <div class="box7_overlay">
+            <span class="box7_p">Bi-Facial Glass/Glass Modules</span>
+            <button class="box7_icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="custom-col">
+          <img src="static/images/image-8.png" alt="" />
+          <div class="box7_overlay">
+            <span class="box7_p">Bypass Diodes</span>
+            <button class="box7_icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="custom-col">
+          <img src="static/images/image-9.png" alt="" />
+          <div class="box7_overlay">
+            <span class="box7_p">Half-cut cells</span>
+            <button class="box7_icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      {{visible}}
     </section>
 
     <!-- 6. 页脚区 -->
@@ -121,4 +248,14 @@
     <!-- Bootstrap JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
+
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: function () {
+        return { visible: "false" };
+      },
+    });
+  </script>
 </html>

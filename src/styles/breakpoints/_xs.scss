@@ -6,11 +6,6 @@
 // 页面宽度：393px
 // 修改位置：本文件
 
-.padding-4 {
-  padding-left: 4%;
-  padding-right: 4%
-}
-
 // ============================================
 // 1. 顶部 Banner 区
 // ============================================
@@ -22,7 +17,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 393px;
   margin: 0 auto;
 
   .hero-header {
@@ -211,7 +205,6 @@
   padding: 2rem 0;
 
   .product-card {
-    width: 90%;
     padding: 0 !important;
     border-radius: 16px;
     overflow: hidden;
@@ -283,38 +276,218 @@
       margin-top: -150px; // 向上调整10px
     }
   }
-}
 
 
-// 针对不同卡片的细微调整
-.utility-card {
-  background-color: black;
-  color: white;
-  border: 1px solid rgba(186, 186, 186, 0.4);
-  .power-rating {
-    background-color: #000;
-    color: #FFFFFF;
-    border: 2px solid white;
+  // 针对不同卡片的细微调整
+  .utility-card {
+    background-color: black;
+    color: white;
+    border: 1px solid rgba(186, 186, 186, 0.4);
+
+    .power-rating {
+      background-color: #000;
+      color: #FFFFFF;
+      border: 2px solid white;
+    }
+
+    .product-image img {
+      object-position: center 70%; // 调整图片显示位置
+    }
   }
-  .product-image img {
-    object-position: center 70%; // 调整图片显示位置
-  }
-}
 
-.residential-card {
-  background-color: white;
-  color: black;
-  border:0px;
-  .power-rating {
+  .residential-card {
     background-color: white;
-    color: #000000;
-    border: 2px solid black;
-  }
+    color: black;
+    border: 0px;
 
-  .product-image img {
-    object-position: center;
+    .power-rating {
+      background-color: white;
+      color: #000000;
+      border: 2px solid black;
+    }
+
+    .product-image img {
+      object-position: center;
+    }
   }
 }
+
+.box5 {
+
+  padding: 50px 0 20px;
+
+  .box5_content {
+    margin-bottom: 50px;
+    width: 100%;
+
+    .box5_tag {
+
+      .box5_icon {
+        height: 6px;
+        width: 6px;
+        margin-right: 5px;
+        margin-top: 4px;
+        background-color: white;
+      }
+
+      display: flex;
+      font-family: 'MiSans';
+      font-style: normal;
+      font-weight: 380;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    .box5_one_p {
+      font-family: 'MiSans';
+      font-style: normal;
+      font-weight: 380;
+      font-size: 24px;
+      line-height: 32px;
+      color: #FFFFFF;
+    }
+
+    .box5_title {
+      font-family: 'MiSans';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 56px;
+      /* identical to box height, or 117% */
+      letter-spacing: -0.72px;
+      color: #FFFFFF;
+    }
+
+    .box5_p {
+      font-family: 'MiSans';
+      font-style: normal;
+      font-weight: 380;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.box6 {
+  padding: 50px 0 20px;
+
+  .box6_content {
+    margin-bottom: 30px;
+    width: 100%;
+
+    .box6_tag {
+
+      .box6_icon {
+        height: 6px;
+        width: 6px;
+        margin-right: 5px;
+        margin-top: 4px;
+        background-color: white;
+      }
+
+      display: flex;
+      font-family: 'MiSans';
+      font-style: normal;
+      font-weight: 380;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    .box6_p {
+      /* headline/small */
+      font-family: 'MiSans';
+      font-style: normal;
+      font-weight: 380;
+      font-size: 24px;
+      line-height: 32px;
+      color: #FFFFFF;
+
+      letter-spacing: 1px;
+
+    }
+  }
+}
+
+// 卡片容器样式
+.box7 {
+  // 确保卡片是正方形（宽度由父容器决定，高度与宽度一致）
+  position: relative;
+
+  // 图片样式：铺满卡片
+  .custom-col {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+  }
+
+  // 覆盖层：居中放置文本和按钮
+  .box7_overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 0px;
+    background: rgb(36, 36, 36);
+    padding: 5px 30px;
+    border-radius: 25px; // 增加圆角，更圆润
+    white-space: nowrap;
+
+    // 文本样式
+    .box7_p {
+      font-family: 'MiSans';
+      font-style: normal;
+      font-weight: 380;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.54px;
+      color: #FFFFFF;
+      flex-shrink: 0;
+      padding-left: 15px;
+      padding-bottom: 3px;
+    }
+
+    // 按钮样式
+    .box7_icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #666666;
+      color: #fff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 12px;
+      flex-shrink: 0;
+      position: relative;
+      right: -20px; // 调整为-20px，配合padding实现靠右5px效果
+      margin-right: 0px; // 调整为-10px
+    }
+  }
+}
+
+
 
 // ============================================
 // 6. 页脚区
@@ -388,4 +561,9 @@
     width: auto;
     opacity: 0.8;
   }
+}
+
+.padding-4 {
+  padding-left: 4%;
+  padding-right: 4%;
 }

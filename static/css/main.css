@@ -12850,15 +12850,11 @@ ul {
 .custom-grid {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
 }
 
 .custom-col {
   position: relative;
   width: 100%;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .custom-col-1 {
@@ -13239,11 +13235,6 @@ ul {
   }
 }
 
-.padding-4 {
-  padding-left: 4%;
-  padding-right: 4%;
-}
-
 .hero-banner {
   background-color: #000000;
   min-height: 100vh;
@@ -13251,7 +13242,6 @@ ul {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 393px;
   margin: 0 auto;
 }
 .hero-banner .hero-header {
@@ -13403,7 +13393,6 @@ ul {
   padding: 2rem 0;
 }
 .box4 .product-card {
-  width: 90%;
   padding: 0 !important;
   border-radius: 16px;
   overflow: hidden;
@@ -13467,33 +13456,179 @@ ul {
   display: block;
   margin-top: -150px;
 }
-
-.utility-card {
+.box4 .utility-card {
   background-color: black;
   color: white;
   border: 1px solid rgba(186, 186, 186, 0.4);
 }
-.utility-card .power-rating {
+.box4 .utility-card .power-rating {
   background-color: #000;
   color: #FFFFFF;
   border: 2px solid white;
 }
-.utility-card .product-image img {
+.box4 .utility-card .product-image img {
   object-position: center 70%;
 }
-
-.residential-card {
+.box4 .residential-card {
   background-color: white;
   color: black;
   border: 0px;
 }
-.residential-card .power-rating {
+.box4 .residential-card .power-rating {
   background-color: white;
   color: #000000;
   border: 2px solid black;
 }
-.residential-card .product-image img {
+.box4 .residential-card .product-image img {
   object-position: center;
+}
+
+.box5 {
+  padding: 50px 0 20px;
+}
+.box5 .box5_content {
+  margin-bottom: 50px;
+  width: 100%;
+}
+.box5 .box5_content .box5_tag .box5_icon {
+  height: 6px;
+  width: 6px;
+  margin-right: 5px;
+  margin-top: 4px;
+  background-color: white;
+}
+.box5 .box5_content .box5_tag {
+  display: flex;
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 380;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.box5 .box5_content .box5_one_p {
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 380;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+.box5 .box5_content .box5_title {
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  /* identical to box height, or 117% */
+  letter-spacing: -0.72px;
+  color: #FFFFFF;
+}
+.box5 .box5_content .box5_p {
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 380;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.box6 {
+  padding: 50px 0 20px;
+}
+.box6 .box6_content {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.box6 .box6_content .box6_tag .box6_icon {
+  height: 6px;
+  width: 6px;
+  margin-right: 5px;
+  margin-top: 4px;
+  background-color: white;
+}
+.box6 .box6_content .box6_tag {
+  display: flex;
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 380;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.box6 .box6_content .box6_p {
+  /* headline/small */
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 380;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+.box7 {
+  position: relative;
+}
+.box7 .custom-col {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.box7 .custom-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.box7 .box7_overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0px;
+  background: rgb(36, 36, 36);
+  padding: 5px 30px;
+  border-radius: 25px;
+  white-space: nowrap;
+}
+.box7 .box7_overlay .box7_p {
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 380;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.54px;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 3px;
+}
+.box7 .box7_overlay .box7_icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #666666;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  flex-shrink: 0;
+  position: relative;
+  right: -20px;
+  margin-right: 0px;
 }
 
 .site-footer {
@@ -13555,6 +13690,11 @@ ul {
   height: 24px;
   width: auto;
   opacity: 0.8;
+}
+
+.padding-4 {
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 /*# sourceMappingURL=main.css.map */
