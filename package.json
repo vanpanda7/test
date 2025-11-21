@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.13.1",
     "element-ui": "^2.15.14"
   },
   "devDependencies": {

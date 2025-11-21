@@ -497,13 +497,13 @@
 
     .box8_left {
       width: 5%;
-      padding:  1%;
+      padding: 1%;
 
       .box8_left_icon {
         width: 6px;
         height: 6px;
         background-color: white;
-        
+
       }
     }
 
@@ -520,6 +520,52 @@
       color: #FFFFFF;
 
     }
+  }
+
+  .custom-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'MiSans';
+    font-style: normal;
+    font-weight: 380;
+    font-size: 24px;
+    line-height: 32px;
+    color: #3A3A3A;
+    margin-bottom: 20px;
+
+  }
+
+  .title-text {
+    /* 文字靠左，通过flex布局自动实现 */
+    flex: 1;
+  }
+
+  .circle-btn {
+    width: 45px;
+    /* 设置宽度 */
+    height: 45px;
+    /* 设置高度，与宽度一致形成正圆 */
+    padding: 0;
+    font-size: 30px;
+    font-weight: 400;
+    /* 移除内边距 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: 50%;
+    /* 防止按钮被压缩 */
+  }
+
+  /* 确保折叠面板项头部样式 */
+  .collapse-item ::v-deep .el-collapse-item__header {
+    height: auto;
+    /* 让高度自适应 */
+    padding: 8px 0;
+    /* 根据需要调整垂直内边距 */
   }
 }
 
