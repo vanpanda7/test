@@ -13631,6 +13631,35 @@ ul {
   margin-right: 0px;
 }
 
+.box8 {
+  margin: 100px 0;
+}
+.box8 .box8_tag {
+  display: flex;
+  width: 100%;
+  margin: 40px 0;
+}
+.box8 .box8_tag .box8_left {
+  width: 5%;
+  padding: 1%;
+}
+.box8 .box8_tag .box8_left .box8_left_icon {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+}
+.box8 .box8_tag .box8_p {
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 380;
+  font-size: 12px;
+  line-height: 14px;
+  /* or 117% */
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
 .site-footer {
   background-color: #000000;
   padding: 3rem 1.5rem;
