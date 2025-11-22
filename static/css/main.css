@@ -12802,7 +12802,6 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   width: 100%;
-  max-width: 393px;
   margin: 0 auto;
   position: relative;
 }
@@ -13248,6 +13247,7 @@ ul {
   width: 92%;
   margin-bottom: 2rem;
   margin: 4% auto 2rem auto;
+  z-index: 9999;
 }
 .hero-banner .hero-header .hero-header-content {
   display: flex;
@@ -13288,6 +13288,8 @@ ul {
   gap: 2rem;
   overflow: hidden;
   position: relative;
+  /* top: 0; */
+  top: -150px;
 }
 .box1 .hero-content .hero-image {
   width: 1024px;
@@ -13306,7 +13308,7 @@ ul {
   position: absolute;
   bottom: 100px;
   /* 为按钮留出空间 */
-  left: 4%;
+  left: 8.333%;
   /* 偏左位置 */
   width: 90%;
   /* 限制宽度 */
@@ -13332,14 +13334,14 @@ ul {
   position: absolute;
   bottom: 5%;
   /* 在文字下方30px位置 */
-  left: 4%;
+  left: 8.333%;
   /* 与文字左对齐 */
   /* 按钮样式 */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
-  background-color: #000000;
+  padding: 6px 8px;
+  background-color: #3a3a3a;
   color: #ffffff;
   border-radius: 8px;
   font-size: 1rem;
@@ -13404,7 +13406,7 @@ ul {
   margin-bottom: 20px;
 }
 .box4 .product-card .product-info {
-  padding: 3rem 0rem;
+  padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -13449,6 +13451,7 @@ ul {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px 30px;
 }
 .box4 .product-card img {
   width: 100%;
@@ -13722,7 +13725,7 @@ ul {
 }
 .box8 .tucen {
   position: relative;
-  height: 400px;
+  height: 370px;
   overflow: hidden;
   transform: translateZ(0);
 }
@@ -13748,18 +13751,15 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
 
-.box9 {
-  padding: 0 4%;
-}
 .box9 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 2rem;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
@@ -13780,16 +13780,6 @@ ul {
   height: auto;
   display: block;
   border-radius: 10px;
-}
-.box9 .hero-content .overlay-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 4%;
-  box-sizing: border-box;
-  pointer-events: none;
 }
 .box9 .hero-content .overlay-container .up_box {
   pointer-events: auto;
@@ -13817,7 +13807,7 @@ ul {
   width: auto;
 }
 .box9 .hero-content .overlay-container .up_box.up_box_2 .image-container {
-  width: 333px;
+  width: 300px;
   height: 250px;
   position: relative;
   border-radius: 10px;
@@ -13854,7 +13844,7 @@ ul {
   flex-shrink: 0;
 }
 .box9 .hero-content .overlay-container .up_box.up_box_3 {
-  width: 333px;
+  width: 300px;
   height: 270px;
   top: 460px;
   left: 4%;
@@ -13869,10 +13859,7 @@ ul {
   color: #ffffff;
 }
 .box9 .hero-content .overlay-container .up_box.up_box_3 .aaa {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  z-index: 2;
+  width: 100%;
 }
 .box9 .hero-content .overlay-container .up_box.up_box_3 .aaa .small_title {
   display: flex;
@@ -13917,81 +13904,98 @@ ul {
   color: #FFFFFF;
 }
 
+.box10 {
+  padding: 0 0%;
+}
 .box10 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 2rem;
-  overflow: hidden;
   position: relative;
   margin: 0 auto;
   width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
 }
-.box10 .hero-content .hero-image {
+.box10 .hero-content .hero-image-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.box10 .hero-content .hero-image-container .hero-image {
   width: 1320px;
   height: auto;
   margin: 0 auto;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 10px;
 }
-.box10 .hero-content .hero-image img {
+.box10 .hero-content .hero-image-container .hero-image img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 10px;
 }
-.box10 .box7_overlay {
+.box10 .hero-content .box7_overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: block;
-  padding: 40px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
-.box10 .box7_overlay .title {
+.box10 .hero-content .box7_overlay .custom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.box10 .hero-content .box7_overlay .custom-grid .title {
   font-family: "MiSans";
   font-style: normal;
   font-weight: 500;
-  font-size: 48px;
+  font-size: 25px;
   line-height: 44px;
-  /* identical to box height, or 122% */
   letter-spacing: -0.16px;
   color: #FFFFFF;
-  font-size: 30px;
   text-align: left;
-  margin-right: 60px;
-  margin-bottom: 20px;
+  margin: 0;
   letter-spacing: 1px;
+  float: left;
+  margin-bottom: 20px;
 }
-.box10 .box7_overlay .submit_email {
+.box10 .hero-content .box7_overlay .custom-grid .submit_email {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
-  background: rgba(26, 26, 26, 0.8);
+  background: rgba(63, 63, 63, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
   color: #ffffff;
 }
-.box10 .box7_overlay .submit_email input {
-  width: 60%;
-  float: left;
-  margin: 0 15px;
+.box10 .hero-content .box7_overlay .custom-grid .submit_email input {
+  flex: 1;
   background: none;
   border: none;
+  color: #FFFFFF;
+  font-family: "MiSans";
+  font-size: 14px;
+  padding: 10px 0;
 }
-.box10 .box7_overlay .submit_email input::placeholder {
+.box10 .hero-content .box7_overlay .custom-grid .submit_email input::placeholder {
   color: white;
   letter-spacing: 0.5px;
 }
-.box10 .box7_overlay .submit_email input:active, .box10 .box7_overlay .submit_email input:focus {
+.box10 .hero-content .box7_overlay .custom-grid .submit_email input:focus {
   outline: none;
 }
-.box10 .box7_overlay .submit_email button {
+.box10 .hero-content .box7_overlay .custom-grid .submit_email button {
   font-family: "MiSans";
   font-style: normal;
   font-weight: 380;
@@ -14000,11 +14004,13 @@ ul {
   text-align: center;
   letter-spacing: 0.54px;
   color: #1D1D1D;
-  float: left;
-  width: 30%;
   background-color: white;
-  padding: 10px;
+  padding: 10px 5px;
   border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-left: -12px;
 }
 
 .site-footer {
@@ -14071,18 +14077,33 @@ ul {
 .site-footer .aaa {
   padding: 30px 0 60px;
 }
-.site-footer .footer-bottom {
+.site-footer .aaa .custom-grid {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .site-footer .aaa .custom-grid {
+    flex-direction: row;
+  }
+  .site-footer .aaa .custom-grid .custom-col-md-6:first-child {
+    order: 2;
+  }
+  .site-footer .aaa .custom-grid .custom-col-md-6:last-child {
+    order: 1;
+  }
+}
+.site-footer .aaa .footer-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
   padding-top: 0;
 }
-.site-footer .footer-bottom .footer-copyright {
+.site-footer .aaa .footer-bottom .footer-copyright {
   text-align: left;
   width: 100%;
 }
-.site-footer .footer-bottom .footer-copyright p {
+.site-footer .aaa .footer-bottom .footer-copyright p {
   font-family: "MiSans";
   font-style: normal;
   font-weight: 380;
@@ -14091,16 +14112,982 @@ ul {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 8px;
 }
-.site-footer .footer-bottom .footer-copyright p:last-child {
+.site-footer .aaa .footer-bottom .footer-copyright p:last-child {
   margin-bottom: 0;
 }
-.site-footer .footer-logo img {
+.site-footer .aaa .footer-bottom img {
   width: 100%;
 }
 
 .padding-4 {
   padding-left: 4%;
   padding-right: 4%;
+}
+
+@media (min-width: 393px) {
+  .box9 .hero-content .overlay-container {
+    padding: 2%;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_1 {
+    top: 100px;
+    left: 5%;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_1 p {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_2, .box9 .hero-content .overlay-container .up_box.up_box_3 {
+    width: 96%;
+    left: 2%;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_2 .image-container, .box9 .hero-content .overlay-container .up_box.up_box_3 .image-container {
+    width: 100%;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_2 {
+    top: 200px;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_3 {
+    top: 460px;
+  }
+}
+@media (min-width: 768px) {
+  .custom-col {
+    padding: 8px;
+  }
+  .box2 .box2-content {
+    display: flex;
+  }
+  .box2 .box2-content .box2-content-cell {
+    margin-bottom: 20px;
+    padding-right: 5px;
+  }
+  .box2 .box2-content .box2-content-cell img {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+    height: auto;
+    display: block;
+  }
+  .box3 {
+    margin: 30px 50px;
+  }
+  .box4 {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  .box4 .custom-col-sm-2 {
+    padding: 5px;
+  }
+  .box4 .product-card {
+    padding: 0 !important;
+    border-radius: 16px;
+    overflow: hidden;
+    font-family: "Helvetica Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .box4 .product-card .product-info {
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .box4 .product-card .product-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .box4 .product-card .product-title h3, .box4 .product-card .product-title .h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+  .box4 .product-card .product-title .power-rating {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 30px;
+    margin: 0;
+  }
+  .box4 .product-card .product-dimensions {
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+    margin-top: -1rem;
+    text-align: center;
+  }
+  .box4 .product-card .product-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: -0.5rem;
+    max-width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .box4 .product-card img {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    margin-top: -250px;
+    transform: scale(1.2);
+    transform-origin: center top;
+  }
+  .box4 .utility-card {
+    background-color: black;
+    color: white;
+    border: 1px solid rgba(186, 186, 186, 0.4);
+  }
+  .box4 .utility-card .power-rating {
+    background-color: #000;
+    color: #FFFFFF;
+    border: 2px solid white;
+  }
+  .box4 .utility-card img {
+    transform: scale(1.2) translateY(-46px);
+    margin-top: -193px;
+  }
+  .box4 .residential-card {
+    background-color: white;
+    color: black;
+    border: 0px;
+  }
+  .box4 .residential-card .power-rating {
+    background-color: white;
+    color: #000000;
+    border: 2px solid black;
+  }
+  .box4 .residential-card img {
+    transform: scale(1.2) translateY(-55px) translateX(40px);
+  }
+  .box5 {
+    padding: 50px 0 20px;
+  }
+  .box5 .box5_content {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .box5 .box5_content .box5_tag .box5_icon {
+    height: 6px;
+    width: 6px;
+    margin-right: 5px;
+    margin-top: 4px;
+    background-color: white;
+  }
+  .box5 .box5_content .box5_tag {
+    display: flex;
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .box5 .box5_content .box5_one_p {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+  }
+  .box5 .box5_content .box5_title {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    /* identical to box height, or 117% */
+    letter-spacing: -0.72px;
+    color: #FFFFFF;
+  }
+  .box5 .box5_content .box5_p {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .box6 {
+    padding: 50px 50px 20px !important;
+  }
+  .box6 .box6_content {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .box6 .box6_content .box6_tag .box6_icon {
+    height: 6px;
+    width: 6px;
+    margin-right: 5px;
+    margin-top: 4px;
+    background-color: white;
+  }
+  .box6 .box6_content .box6_tag {
+    display: flex;
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .box6 .box6_content .box6_p {
+    /* headline/small */
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+  }
+  .box7 {
+    position: relative;
+  }
+  .box7 .custom-col {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+  .box7 .custom-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+  }
+  .box7 .box7_overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 0px;
+    background: rgb(36, 36, 36);
+    padding: 5px 30px;
+    border-radius: 25px;
+    white-space: nowrap;
+  }
+  .box7 .box7_overlay .box7_p {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.54px;
+    color: #FFFFFF;
+    flex-shrink: 0;
+    padding-left: 15px;
+    padding-bottom: 3px;
+  }
+  .box7 .box7_overlay .box7_icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #666666;
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+    flex-shrink: 0;
+    position: relative;
+    right: -20px;
+    margin-right: 0px;
+  }
+  .box8 {
+    margin: 100px 0;
+  }
+  .box8 .custom-grid {
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .box8 .box8_tag {
+    display: flex;
+    width: 100%;
+    margin: 40px 0;
+  }
+  .box8 .box8_tag .box8_left {
+    width: 5%;
+    padding: 1%;
+  }
+  .box8 .box8_tag .box8_left .box8_left_icon {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+  }
+  .box8 .box8_tag .box8_p {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 12px;
+    line-height: 14px;
+    /* or 117% */
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .box8 .custom-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 24px;
+    line-height: 32px;
+    color: #3a3a3a;
+  }
+  .box8 .custom-title .title-text {
+    /* 文字靠左，通过flex布局自动实现 */
+    flex: 1;
+  }
+  .box8 .custom-title .circle-btn {
+    width: 45px;
+    /* 设置宽度 */
+    height: 45px;
+    /* 设置高度，与宽度一致形成正圆 */
+    padding: 0;
+    font-size: 30px;
+    font-weight: 400;
+    /* 移除内边距 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: 50%;
+    /* 防止按钮被压缩 */
+    margin-right: -20px;
+    z-index: 9999;
+  }
+  .box8 .custom-title {
+    /* 确保折叠面板项头部样式 */
+  }
+  .box8 .custom-title .collapse-item ::v-deep .el-collapse-item__header {
+    height: auto;
+    /* 让高度自适应 */
+    padding: 8px 0;
+    /* 根据需要调整垂直内边距 */
+  }
+  .box8 .el-collapse {
+    border: 0 !important;
+  }
+  .box8 .el-collapse .el-collapse-item {
+    margin-bottom: 20px;
+  }
+  .box8 .el-collapse .el-collapse-item .el-collapse-item__header,
+  .box8 .el-collapse .el-collapse-item .el-collapse-item__wrap {
+    padding: 20px 0 !important;
+    background-color: black;
+    border: 0;
+  }
+  .box8 .el-collapse .el-button:focus,
+  .box8 .el-collapse .el-button:hover {
+    color: black;
+    border-color: white;
+  }
+  .box8 {
+    /* 只添加垂直居中，不影响栅格布局 */
+  }
+  .box8 .tucen {
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+  }
+  .box8 {
+    /* 保持你原来的图片切换动画样式 */
+  }
+  .box8 .tucen {
+    position: relative;
+    height: 370px;
+    width: 100%;
+    overflow: hidden;
+    transform: translateZ(0);
+  }
+  .box8 .fade-enter-active,
+  .box8 .fade-leave-active {
+    transition: opacity 1s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0);
+  }
+  .box8 .fade-enter {
+    opacity: 0;
+  }
+  .box8 .fade-leave-to {
+    opacity: 0;
+  }
+  .box8 .box8-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_1 {
+    top: 100px;
+    left: 5%;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_1 p {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_2, .box9 .hero-content .overlay-container .up_box.up_box_3 {
+    width: 96%;
+    left: 2%;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_2 .image-container, .box9 .hero-content .overlay-container .up_box.up_box_3 .image-container {
+    width: 100%;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_2 {
+    top: 200px;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_3 {
+    top: 460px;
+  }
+  .box10 {
+    padding: 0 0%;
+  }
+  .box10 .hero-content .box7_overlay .custom-grid .title {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 44px;
+    letter-spacing: -0.16px;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 0;
+    letter-spacing: 1px;
+    float: left;
+    margin-bottom: 20px;
+  }
+  .box10 .hero-content .box7_overlay .custom-grid .submit_email button {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.54px;
+    color: #1D1D1D;
+    background-color: white;
+    padding: 10px 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: -12px;
+  }
+  .site-footer .custom-grid {
+    flex-direction: row;
+  }
+  .site-footer .custom-grid .custom-col-md-6:first-child {
+    order: 2;
+  }
+  .site-footer .custom-grid .custom-col-md-6:last-child {
+    order: 1;
+  }
+  .padding-4 {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    max-width: 1440px;
+  }
+  .hero-banner {
+    background-color: #000000;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hero-banner .hero-header {
+    width: 98%;
+    margin-bottom: 2rem;
+    margin: 1% auto 2rem auto;
+  }
+  .hero-banner .hero-header .hero-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    color: #ffffff;
+  }
+  .hero-banner .logo img {
+    height: 32px;
+    width: auto;
+  }
+  .hero-banner .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 24px;
+    height: 18px;
+  }
+  .hero-banner .menu-toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+  }
+  .box2 {
+    margin-top: -165px;
+  }
+  .box3 {
+    padding: 20px 0;
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 48px;
+    line-height: 56px;
+    /* or 117% */
+    letter-spacing: -0.72px;
+    color: #FFFFFF;
+  }
+  .box3 .box3_title {
+    color: #FFFFFF;
+    margin-bottom: 5px;
+  }
+  .box3 .box3_title2 {
+    color: #797979;
+  }
+  .box8 {
+    margin: 100px 0;
+  }
+  .box8 .custom-grid {
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .box8 .box8_tag {
+    display: flex;
+    width: 100%;
+    margin: 40px 0;
+  }
+  .box8 .box8_tag .box8_left {
+    width: 5%;
+    padding: 1%;
+  }
+  .box8 .box8_tag .box8_left .box8_left_icon {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+  }
+  .box8 .box8_tag .box8_p {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 12px;
+    line-height: 14px;
+    /* or 117% */
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .box8 .custom-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 24px;
+    line-height: 32px;
+    color: #3a3a3a;
+  }
+  .box8 .custom-title .title-text {
+    /* 文字靠左，通过flex布局自动实现 */
+    flex: 1;
+  }
+  .box8 .custom-title .circle-btn {
+    width: 45px;
+    /* 设置宽度 */
+    height: 45px;
+    /* 设置高度，与宽度一致形成正圆 */
+    padding: 0;
+    font-size: 30px;
+    font-weight: 400;
+    /* 移除内边距 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: 50%;
+    /* 防止按钮被压缩 */
+    margin-right: -20px;
+    z-index: 9999;
+  }
+  .box8 .custom-title {
+    /* 确保折叠面板项头部样式 */
+  }
+  .box8 .custom-title .collapse-item ::v-deep .el-collapse-item__header {
+    height: auto;
+    /* 让高度自适应 */
+    padding: 8px 0;
+    /* 根据需要调整垂直内边距 */
+  }
+  .box8 .el-collapse {
+    border: 0 !important;
+  }
+  .box8 .el-collapse .el-collapse-item {
+    margin-bottom: 20px;
+  }
+  .box8 .el-collapse .el-collapse-item .el-collapse-item__header,
+  .box8 .el-collapse .el-collapse-item .el-collapse-item__wrap {
+    padding: 20px 0 !important;
+    background-color: black;
+    border: 0;
+  }
+  .box8 .el-collapse .el-button:focus,
+  .box8 .el-collapse .el-button:hover {
+    color: black;
+    border-color: white;
+  }
+  .box8 {
+    /* 只添加垂直居中，不影响栅格布局 */
+  }
+  .box8 .tucen {
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+  }
+  .box8 {
+    /* 保持你原来的图片切换动画样式 */
+  }
+  .box8 .tucen {
+    position: relative;
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
+    transform: translateZ(0);
+  }
+  .box8 .fade-enter-active,
+  .box8 .fade-leave-active {
+    transition: opacity 1s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0);
+  }
+  .box8 .fade-enter {
+    opacity: 0;
+  }
+  .box8 .fade-leave-to {
+    opacity: 0;
+  }
+  .box8 .box8-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .box9 .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 92%;
+  }
+  .box9 .hero-content .hero-image {
+    width: 1320px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+  }
+  .box9 .hero-content .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  .box9 .hero-content .overlay-container .up_box {
+    pointer-events: auto;
+  }
+  .box9 .hero-content .overlay-container .up_box {
+    right: 10px;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_1 {
+    display: none;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_1 p {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.72px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_2 {
+    top: 10px;
+    left: auto;
+    width: auto;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_2 .image-container {
+    width: 360px;
+    height: 360px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_2 .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_2 .small_title {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_2 .small_title .box6_icon {
+    height: 6px;
+    width: 6px;
+    margin-right: 8px;
+    background-color: white;
+    flex-shrink: 0;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_3 {
+    top: 375px;
+    width: 360px;
+    height: 360px;
+    left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+    background: rgba(67, 67, 67, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    color: #ffffff;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_3 .aaa {
+    width: 100%;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_3 .aaa .small_title {
+    display: flex;
+    align-items: center;
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_3 .aaa .small_title .box6_icon {
+    height: 6px;
+    width: 6px;
+    margin-right: 8px;
+    background-color: white;
+    flex-shrink: 0;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_3 .aaa .small_card {
+    padding-top: 30px;
+    text-align: left;
+    font-family: "Boom Sans Display";
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 10px;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_3 .aaa .small_card .card-title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.07px;
+    padding-bottom: 15px;
+  }
+  .box9 .hero-content .overlay-container .up_box.up_box_3 .aaa .small_card .card-second {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .box10 {
+    padding: 0 0%;
+  }
+  .box10 .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .box10 .hero-content .hero-image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .box10 .hero-content .hero-image-container .hero-image {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .box10 .hero-content .hero-image-container .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  .box10 .hero-content .box7_overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  .box10 .hero-content .box7_overlay .custom-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .box10 .hero-content .box7_overlay .custom-grid .title {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 44px;
+    letter-spacing: -0.16px;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 0;
+    letter-spacing: 1px;
+    float: left;
+    margin-bottom: 20px;
+  }
+  .box10 .hero-content .box7_overlay .custom-grid .submit_email {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    background: rgba(63, 63, 63, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    color: #ffffff;
+  }
+  .box10 .hero-content .box7_overlay .custom-grid .submit_email input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-family: "MiSans";
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  .box10 .hero-content .box7_overlay .custom-grid .submit_email input::placeholder {
+    color: white;
+    letter-spacing: 0.5px;
+  }
+  .box10 .hero-content .box7_overlay .custom-grid .submit_email input:focus {
+    outline: none;
+  }
+  .box10 .hero-content .box7_overlay .custom-grid .submit_email button {
+    font-family: "MiSans";
+    font-style: normal;
+    font-weight: 380;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.54px;
+    color: #1D1D1D;
+    background-color: white;
+    padding: 10px 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: -12px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

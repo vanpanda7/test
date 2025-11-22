@@ -1,25 +1,49 @@
 // ============================================
-// SM 断点样式 (393px+)
+// SM 断点样式 (768px+)
 // ============================================
 // 用途：小屏幕设备的样式
-// 断点：393px 及以上
+// 断点：768px 及以上
 // 修改位置：本文件
 // 使用：@include media-breakpoint-up(sm) { ... }
 
 @include media-breakpoint-up(sm) {
-  // ============================================
-  // 示例 1：覆盖基础样式（在 _xs.scss 中定义的）
-  // ============================================
-  // .my-card {
-  //   padding: $spacing-md;  // 从 sm 开始使用更大的 padding
-  //   font-size: $font-size-base;
-  // }
 
-  // ============================================
-  // 示例 2：新增只在 sm 及以上生效的样式
-  // ============================================
-  // .show-from-sm {
-  //   display: block;  // 从 sm 开始显示
-  // }
+  .box9 {
+    .hero-content {
+      .overlay-container {
+        padding: 2%;
+
+        .up_box {
+          &.up_box_1 {
+            top: 100px;
+            left: 5%;
+
+            p {
+              font-size: 36px;
+              line-height: 42px;
+            }
+          }
+
+          &.up_box_2,
+          &.up_box_3 {
+            width: 96%;
+            left: 2%;
+
+            .image-container {
+              width: 100%;
+            }
+          }
+
+          &.up_box_2 {
+            top: 200px;
+          }
+
+          &.up_box_3 {
+            top: 460px;
+          }
+        }
+      }
+    }
+  }
+  
 }
-

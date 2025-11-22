@@ -7,29 +7,619 @@
 // 使用：@include media-breakpoint-up(md) { ... }
 
 @include media-breakpoint-up(md) {
-  // ============================================
-  // 示例 1：继续覆盖样式（移动优先原则）
-  // ============================================
-  // .my-card {
-  //   padding: $spacing-lg;  // md 断点使用更大的 padding
-  //   font-size: $font-size-lg;
-  // }
 
-  // ============================================
-  // 示例 2：响应式布局（从 md 开始改变布局）
-  // ============================================
-  // .product-grid {
-  //   display: grid;
-  //   grid-template-columns: repeat(2, 1fr);  // md 开始显示 2 列
-  //   gap: $spacing-md;
-  // }
+  body {
+    // max-width: 768px;
+  }
 
-  // ============================================
-  // 示例 3：响应式标题
-  // ============================================
-  // .page-title {
-  //   font-size: $font-size-2xl;
-  //   margin-bottom: $spacing-lg;
-  // }
+  .custom-col {
+    padding: 8px;
+  }
+
+
+  .box2 {
+    .box2-content {
+      display: flex;
+
+      .box2-content-cell {
+        margin-bottom: 20px;
+        padding-right: 5px;
+
+        img {
+          max-width: 100%;
+          aspect-ratio: 1 / 1;
+          border-radius: 15px;
+          height: auto;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .box3 {
+    margin: 30px 50px;
+
+    .box3_title {}
+
+    .box3_title2 {}
+
+  }
+
+  .box4 {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+
+    .custom-col-sm-2 {
+      padding: 5px;
+    }
+
+    .product-card {
+      padding: 0 !important;
+      border-radius: 16px;
+      overflow: hidden;
+      font-family: 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: 0 auto;
+      margin-bottom: 20px;
+
+      .product-info {
+        padding: 3rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      .product-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 0.5rem;
+        flex-wrap: wrap;
+
+        h3 {
+          font-size: 2rem;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          margin: 0;
+        }
+
+        .power-rating {
+          font-family: 'MiSans';
+          font-style: normal;
+          font-weight: 380;
+          font-size: 20px;
+          line-height: 20px;
+          text-align: center;
+          padding: 6px 8px;
+          border-radius: 30px;
+          margin: 0;
+        }
+      }
+
+      .product-dimensions {
+        font-size: 0.85rem;
+        letter-spacing: 0.3px;
+        margin-top: -1rem;
+        text-align: center;
+      }
+
+      .product-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-top: -0.5rem;
+        max-width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      // 直接选择图片元素
+      img {
+        width: 100%;
+        object-fit: contain;
+        display: block;
+        margin-top: -250px;
+        transform: scale(1.2);
+        transform-origin: center top; // 从顶部中心点开始缩放
+      }
+    }
+
+    // 针对不同卡片的细微调整
+    .utility-card {
+      background-color: black;
+      color: white;
+      border: 1px solid rgba(186, 186, 186, 0.4);
+
+      .power-rating {
+        background-color: #000;
+        color: #FFFFFF;
+        border: 2px solid white;
+      }
+
+      img {
+        transform: scale(1.2) translateY(-46px);
+        margin-top: -193px;
+      }
+    }
+
+    .residential-card {
+      background-color: white;
+      color: black;
+      border: 0px;
+
+      .power-rating {
+        background-color: white;
+        color: #000000;
+        border: 2px solid black;
+      }
+
+      img {
+        transform: scale(1.2) translateY(-55px) translateX(40px);
+      }
+    }
+  }
+
+  .box5 {
+
+    padding: 50px 0 20px;
+
+    .box5_content {
+      margin-bottom: 50px;
+      width: 100%;
+
+      .box5_tag {
+
+        .box5_icon {
+          height: 6px;
+          width: 6px;
+          margin-right: 5px;
+          margin-top: 4px;
+          background-color: white;
+        }
+
+        display: flex;
+        font-family: 'MiSans';
+        font-style: normal;
+        font-weight: 380;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+
+      .box5_one_p {
+        font-family: 'MiSans';
+        font-style: normal;
+        font-weight: 380;
+        font-size: 24px;
+        line-height: 32px;
+        color: #FFFFFF;
+      }
+
+      .box5_title {
+        font-family: 'MiSans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+        /* identical to box height, or 117% */
+        letter-spacing: -0.72px;
+        color: #FFFFFF;
+      }
+
+      .box5_p {
+        font-family: 'MiSans';
+        font-style: normal;
+        font-weight: 380;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  .box6 {
+    padding: 50px 50px 20px !important;
+
+    .box6_content {
+      margin-bottom: 30px;
+      width: 100%;
+
+      .box6_tag {
+
+        .box6_icon {
+          height: 6px;
+          width: 6px;
+          margin-right: 5px;
+          margin-top: 4px;
+          background-color: white;
+        }
+
+        display: flex;
+        font-family: 'MiSans';
+        font-style: normal;
+        font-weight: 380;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+
+      .box6_p {
+        /* headline/small */
+        font-family: 'MiSans';
+        font-style: normal;
+        font-weight: 380;
+        font-size: 24px;
+        line-height: 32px;
+        color: #FFFFFF;
+
+        letter-spacing: 1px;
+
+      }
+    }
+  }
+
+  // 卡片容器样式
+  .box7 {
+    // 确保卡片是正方形（宽度由父容器决定，高度与宽度一致）
+    position: relative;
+
+    // 图片样式：铺满卡片
+    .custom-col {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      padding: 5px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 20px;
+      }
+
+    }
+
+    // 覆盖层：居中放置文本和按钮
+    .box7_overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-flex;
+      align-items: center;
+      gap: 0px;
+      background: rgb(36, 36, 36);
+      padding: 5px 30px;
+      border-radius: 25px; // 增加圆角，更圆润
+      white-space: nowrap;
+
+      // 文本样式
+      .box7_p {
+        font-family: 'MiSans';
+        font-style: normal;
+        font-weight: 380;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.54px;
+        color: #FFFFFF;
+        flex-shrink: 0;
+        padding-left: 15px;
+        padding-bottom: 3px;
+      }
+
+      // 按钮样式
+      .box7_icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #666666;
+        color: #fff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 12px;
+        flex-shrink: 0;
+        position: relative;
+        right: -20px; // 调整为-20px，配合padding实现靠右5px效果
+        margin-right: 0px; // 调整为-10px
+      }
+    }
+  }
+
+  .box8 {
+    margin: 100px 0;
+
+    .custom-grid {
+      display: flex;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .box8_tag {
+      display: flex;
+      width: 100%;
+      margin: 40px 0;
+
+      .box8_left {
+        width: 5%;
+        padding: 1%;
+
+        .box8_left_icon {
+          width: 6px;
+          height: 6px;
+          background-color: white;
+
+        }
+      }
+
+      .box8_p {
+        font-family: 'MiSans';
+        font-style: normal;
+        font-weight: 380;
+        font-size: 12px;
+        line-height: 14px;
+        /* or 117% */
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+
+      }
+    }
+
+    .custom-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      font-family: 'MiSans';
+      font-style: normal;
+      font-weight: 380;
+      font-size: 24px;
+      line-height: 32px;
+      color: #3a3a3a;
+
+      .title-text {
+        /* 文字靠左，通过flex布局自动实现 */
+        flex: 1;
+      }
+
+      .circle-btn {
+        width: 45px;
+        /* 设置宽度 */
+        height: 45px;
+        /* 设置高度，与宽度一致形成正圆 */
+        padding: 0;
+        font-size: 30px;
+        font-weight: 400;
+        /* 移除内边距 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background-color: white;
+        border-radius: 50%;
+        /* 防止按钮被压缩 */
+        margin-right: -20px;
+        z-index: 9999;
+      }
+
+      /* 确保折叠面板项头部样式 */
+      .collapse-item ::v-deep .el-collapse-item__header {
+        height: auto;
+        /* 让高度自适应 */
+        padding: 8px 0;
+        /* 根据需要调整垂直内边距 */
+      }
+    }
+
+    .el-collapse {
+      border: 0 !important;
+
+      .el-collapse-item {
+        margin-bottom: 20px;
+
+        .el-collapse-item__header,
+        .el-collapse-item__wrap {
+          padding: 20px 0 !important;
+          background-color: black;
+          border: 0;
+        }
+      }
+
+      .el-button:focus,
+      .el-button:hover {
+        color: black;
+        border-color: white;
+      }
+    }
+
+    // 交叉淡入淡出效果
+    // 确保图片容器是相对定位，以便绝对定位的图片能正确叠加
+    /* 只添加垂直居中，不影响栅格布局 */
+    .tucen {
+      display: flex;
+      align-items: center;
+      /* 垂直居中 */
+    }
+
+    /* 保持你原来的图片切换动画样式 */
+    .tucen {
+      position: relative;
+      height: 370px;
+      width: 100%;
+      overflow: hidden;
+      transform: translateZ(0);
+    }
+
+    .fade-enter-active,
+    .fade-leave-active {
+      transition: opacity 1s ease-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateZ(0);
+    }
+
+    .fade-enter {
+      opacity: 0;
+    }
+
+    .fade-leave-to {
+      opacity: 0;
+    }
+
+    .box8-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+
+  .box9 {
+    .hero-content {
+      .overlay-container {
+
+        .up_box {
+          &.up_box_1 {
+            top: 100px;
+            left: 5%;
+
+            p {
+              font-size: 36px;
+              line-height: 42px;
+            }
+          }
+
+          &.up_box_2,
+          &.up_box_3 {
+            width: 96%;
+            left: 2%;
+
+            .image-container {
+              width: 100%;
+            }
+          }
+
+          &.up_box_2 {
+            top: 200px;
+          }
+
+          &.up_box_3 {
+            top: 460px;
+          }
+        }
+      }
+    }
+  }
+
+  .box10 {
+    padding: 0 0%;
+
+    .hero-content {
+
+      // ===== 图片容器 - 控制溢出 =====
+      .hero-image-container {
+
+        .hero-image {
+
+          img {}
+        }
+      }
+
+      // ===== 覆盖层 - 使用自定义栅格 =====
+      .box7_overlay {
+
+        .custom-grid {
+
+          // ===== 标题列 =====
+          .title {
+            font-family: "MiSans";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 44px;
+            letter-spacing: -0.16px;
+            color: #FFFFFF;
+            text-align: left;
+            margin: 0;
+            letter-spacing: 1px;
+            float: left;
+            margin-bottom: 20px;
+          }
+
+          .submit_email {
+
+            input {
+              &::placeholder {}
+
+              &:focus {}
+            }
+
+            button {
+              font-family: 'MiSans';
+              font-style: normal;
+              font-weight: 380;
+              font-size: 14px;
+              line-height: 16px;
+              text-align: center;
+              letter-spacing: 0.54px;
+              color: #1D1D1D;
+              background-color: white;
+              padding: 10px 5px;
+              border-radius: 10px;
+              border: none;
+              cursor: pointer;
+              white-space: nowrap;
+              margin-left: -12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .site-footer {
+    .custom-grid {
+      flex-direction: row;
+
+      .custom-col-md-6 {
+        &:first-child {
+          order: 2; // 第一个元素移到第二位
+        }
+
+        &:last-child {
+          order: 1; // 第二个元素移到第一位
+        }
+      }
+    }
+  }
+
+  .padding-4 {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
 }
-

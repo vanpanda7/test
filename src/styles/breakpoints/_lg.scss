@@ -7,10 +7,557 @@
 // 使用：@include media-breakpoint-up(lg) { ... }
 
 @include media-breakpoint-up(lg) {
-  // 示例：LG 断点的自定义样式
-  // .my-component {
-  //   font-size: $font-size-xl;
-  //   padding: $spacing-xl;
-  // }
-}
+  body {
+    max-width: 1440px;
+  }
 
+  .hero-banner {
+    background-color: $color-black;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+
+    .hero-header {
+      width: 98%;
+      margin-bottom: $spacing-lg;
+      margin: 1% auto $spacing-lg auto;
+
+      .hero-header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        // 毛玻璃效果
+        background: rgba(255, 255, 255, 0.2); // 偏白背景
+        backdrop-filter: blur(10px); // 毛玻璃模糊效果
+        -webkit-backdrop-filter: blur(10px); // Safari 支持
+
+        border-radius: 5px;
+
+        // 内边距确保内容不贴边
+        padding: $spacing-sm $spacing-md;
+
+        // 确保在深色背景上文字可读
+        color: $color-white;
+      }
+    }
+
+    .logo {
+      img {
+        height: 32px;
+        width: auto;
+      }
+    }
+
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      width: 24px;
+      height: 18px;
+
+      span {
+        width: 100%;
+        height: 2px;
+        background-color: $color-white;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  .box1 {}
+
+  .box2 {
+    margin-top: -165px;
+  }
+
+  .box3 {
+    padding: 20px 0;
+    font-family: 'MiSans';
+    font-style: normal;
+    font-weight: 380;
+    font-size: 48px;
+    line-height: 56px;
+    /* or 117% */
+    letter-spacing: -0.72px;
+    color: #FFFFFF;
+
+
+    .box3_title {
+      color: #FFFFFF;
+      margin-bottom: 5px;
+    }
+
+    .box3_title2 {
+      color: #797979;
+    }
+
+  }
+
+  .box8 {
+    margin: 100px 0;
+
+    .custom-grid {
+      display: flex;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .box8_tag {
+      display: flex;
+      width: 100%;
+      margin: 40px 0;
+
+      .box8_left {
+        width: 5%;
+        padding: 1%;
+
+        .box8_left_icon {
+          width: 6px;
+          height: 6px;
+          background-color: white;
+
+        }
+      }
+
+      .box8_p {
+        font-family: 'MiSans';
+        font-style: normal;
+        font-weight: 380;
+        font-size: 12px;
+        line-height: 14px;
+        /* or 117% */
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+
+      }
+    }
+
+    .custom-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      font-family: 'MiSans';
+      font-style: normal;
+      font-weight: 380;
+      font-size: 24px;
+      line-height: 32px;
+      color: #3a3a3a;
+
+      .title-text {
+        /* 文字靠左，通过flex布局自动实现 */
+        flex: 1;
+      }
+
+      .circle-btn {
+        width: 45px;
+        /* 设置宽度 */
+        height: 45px;
+        /* 设置高度，与宽度一致形成正圆 */
+        padding: 0;
+        font-size: 30px;
+        font-weight: 400;
+        /* 移除内边距 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background-color: white;
+        border-radius: 50%;
+        /* 防止按钮被压缩 */
+        margin-right: -20px;
+        z-index: 9999;
+      }
+
+      /* 确保折叠面板项头部样式 */
+      .collapse-item ::v-deep .el-collapse-item__header {
+        height: auto;
+        /* 让高度自适应 */
+        padding: 8px 0;
+        /* 根据需要调整垂直内边距 */
+      }
+    }
+
+    .el-collapse {
+      border: 0 !important;
+
+      .el-collapse-item {
+        margin-bottom: 20px;
+
+        .el-collapse-item__header,
+        .el-collapse-item__wrap {
+          padding: 20px 0 !important;
+          background-color: black;
+          border: 0;
+        }
+      }
+
+      .el-button:focus,
+      .el-button:hover {
+        color: black;
+        border-color: white;
+      }
+    }
+
+    // 交叉淡入淡出效果
+    // 确保图片容器是相对定位，以便绝对定位的图片能正确叠加
+    /* 只添加垂直居中，不影响栅格布局 */
+    .tucen {
+      display: flex;
+      align-items: center;
+      /* 垂直居中 */
+    }
+
+    /* 保持你原来的图片切换动画样式 */
+    .tucen {
+      position: relative;
+      height: 700px;
+      width: 100%;
+      overflow: hidden;
+      transform: translateZ(0);
+    }
+
+    .fade-enter-active,
+    .fade-leave-active {
+      transition: opacity 1s ease-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateZ(0);
+    }
+
+    .fade-enter {
+      opacity: 0;
+    }
+
+    .fade-leave-to {
+      opacity: 0;
+    }
+
+    .box8-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+
+  .box9 {
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      // gap: $spacing-lg;
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+      border-radius: 10px;
+      width: 92%;
+
+      // ===== 背景图片样式 =====
+      .hero-image {
+        width: 1320px;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 10px;
+        }
+      }
+
+      // ===== 覆盖层容器 =====
+      .overlay-container {
+
+        // 允许内部元素交互
+        .up_box {
+          pointer-events: auto;
+        }
+
+        // ===== 基础 up_box 样式 =====
+        .up_box {
+          right: 10px;
+
+          // ===== 标题区域 (G1_Dallas) =====
+          &.up_box_1 {
+            display: none;
+
+            p {
+              font-family: 'MiSans';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 48px;
+              line-height: 56px;
+              letter-spacing: -0.72px;
+              color: #FFFFFF;
+              margin: 0;
+            }
+          }
+
+          // ===== 地图图片区域 =====
+          &.up_box_2 {
+            top: 10px;
+            left: auto;
+            width: auto; // 改为自适应宽度
+
+            .image-container {
+              width: 360px;
+              height: 360px;
+              border-radius: 10px;
+              overflow: hidden;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                border-radius: 10px;
+              }
+            }
+
+            .small_title {
+              position: absolute;
+              top: 30px;
+              left: 30px;
+              z-index: 2;
+              display: flex;
+              align-items: center;
+              font-family: 'MiSans';
+              font-style: normal;
+              font-weight: 380;
+              font-size: 13px;
+              line-height: 13px;
+              letter-spacing: 0.6px;
+              text-transform: uppercase;
+              color: #FFFFFF;
+
+              .box6_icon {
+                height: 6px;
+                width: 6px;
+                margin-right: 8px;
+                background-color: white;
+                flex-shrink: 0;
+              }
+            }
+          }
+
+          // ===== 数据统计卡片 =====
+          &.up_box_3 {
+            top: 375px;
+            width: 360px;
+            height: 360px;
+            left: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: normal;
+            background: rgba(67, 67, 67, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            color: #ffffff;
+
+            .aaa {
+              width: 100%;
+
+              .small_title {
+                display: flex;
+                align-items: center;
+                font-family: 'MiSans';
+                font-style: normal;
+                font-weight: 380;
+                font-size: 16px;
+                line-height: 16px;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+
+                .box6_icon {
+                  height: 6px;
+                  width: 6px;
+                  margin-right: 8px;
+                  background-color: white;
+                  flex-shrink: 0;
+                }
+              }
+
+              .small_card {
+                padding-top: 30px;
+                text-align: left;
+                font-family: 'Boom Sans Display';
+                color: #FFFFFF;
+                position: absolute;
+                bottom: 10px;
+
+
+                .card-title {
+                  font-weight: 500;
+                  font-size: 30px;
+                  line-height: 36px;
+                  letter-spacing: -0.07px;
+                  padding-bottom: 15px;
+                }
+
+                .card-second {
+                  font-family: 'MiSans';
+                  font-style: normal;
+                  font-weight: 380;
+                  font-size: 10px;
+                  line-height: 14px;
+                  letter-spacing: 0.6px;
+                  text-transform: uppercase;
+                  color: #FFFFFF;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .box10 {
+    padding: 0 0%;
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative; // 为覆盖层提供定位参考
+      margin: 0 auto;
+      width: 100%;
+      overflow: hidden; // 隐藏图片溢出
+      border-radius: 10px;
+
+      // ===== 图片容器 - 控制溢出 =====
+      .hero-image-container {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+
+        .hero-image {
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+          }
+        }
+      }
+
+      // ===== 覆盖层 - 使用自定义栅格 =====
+      .box7_overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 1200px; // 限制覆盖层最大宽度
+        padding: 0 40px;
+        box-sizing: border-box;
+
+        .custom-grid {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+
+          // ===== 标题列 =====
+          .title {
+            font-family: "MiSans";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 44px;
+            letter-spacing: -0.16px;
+            color: #FFFFFF;
+            text-align: left;
+            margin: 0;
+            letter-spacing: 1px;
+            float: left;
+            margin-bottom: 20px;
+          }
+
+          .submit_email {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            background: rgba(63, 63, 63, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 0.5rem 0.5rem 0.5rem 1rem;
+            color: #ffffff;
+
+            input {
+              flex: 1;
+              background: none;
+              border: none;
+              color: #FFFFFF;
+              font-family: 'MiSans';
+              font-size: 14px;
+              padding: 10px 0;
+
+              &::placeholder {
+                color: white;
+                letter-spacing: 0.5px;
+              }
+
+              &:focus {
+                outline: none;
+              }
+            }
+
+            button {
+              font-family: 'MiSans';
+              font-style: normal;
+              font-weight: 380;
+              font-size: 14px;
+              line-height: 16px;
+              text-align: center;
+              letter-spacing: 0.54px;
+              color: #1D1D1D;
+              background-color: white;
+              padding: 10px 5px;
+              border-radius: 10px;
+              border: none;
+              cursor: pointer;
+              white-space: nowrap;
+              margin-left: -12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

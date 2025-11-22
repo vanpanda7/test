@@ -5,12 +5,13 @@
 // 断点：0px 及以上（基础样式，无媒体查询）
 // 页面宽度：393px
 // 修改位置：本文件
+body {
+  // max-width: 393px;
+}
 
 // ============================================
 // 1. 顶部 Banner 区
 // ============================================
-
-
 .hero-banner {
   background-color: $color-black;
   min-height: 100vh;
@@ -24,6 +25,7 @@
     width: 92%;
     margin-bottom: $spacing-lg;
     margin: 4% auto $spacing-lg auto;
+    z-index: 9999;
 
     .hero-header-content {
       display: flex;
@@ -79,6 +81,8 @@
     gap: $spacing-lg;
     overflow: hidden;
     position: relative;
+    /* top: 0; */
+    top: -150px;
 
     .hero-image {
       width: 1024px;
@@ -99,7 +103,7 @@
       position: absolute;
       bottom: 100px;
       /* 为按钮留出空间 */
-      left: 4%;
+      left: 8.333%;
       /* 偏左位置 */
       width: 90%;
       /* 限制宽度 */
@@ -129,15 +133,15 @@
       position: absolute;
       bottom: 5%;
       /* 在文字下方30px位置 */
-      left: 4%;
+      left: 8.333%;
       /* 与文字左对齐 */
 
       /* 按钮样式 */
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 10px;
-      background-color: $color-black;
+      padding: 6px 8px;
+      background-color: #3a3a3a;
       color: $color-white;
       border-radius: 8px;
       font-size: $font-size-base;
@@ -156,10 +160,6 @@
     }
   }
 }
-
-// ============================================
-// 2. 
-// ============================================
 
 .box2 {
 
@@ -219,7 +219,7 @@
     margin-bottom: 20px;
 
     .product-info {
-      padding: 3rem 0rem;
+      padding: 3rem 1rem;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
@@ -269,6 +269,7 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
+      padding: 10px 30px;
     }
 
     // 直接选择图片元素
@@ -420,7 +421,6 @@
   }
 }
 
-// 卡片容器样式
 .box7 {
   // 确保卡片是正方形（宽度由父容器决定，高度与宽度一致）
   position: relative;
@@ -596,7 +596,7 @@
   // 确保图片容器是相对定位，以便绝对定位的图片能正确叠加
   .tucen {
     position: relative;
-    height: 400px;
+    height: 370px;
     overflow: hidden;
     // 创建新的图层，避免重绘影响其他元素
     transform: translateZ(0);
@@ -629,25 +629,25 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px;
   }
 }
 
 .box9 {
-  padding: 0 4%;
-
   .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: $spacing-lg;
+    // gap: $spacing-lg;
     overflow: hidden;
     position: relative;
     margin: 0 auto;
     border-radius: 10px;
     width: 92%;
 
+    // ===== 背景图片样式 =====
     .hero-image {
       width: 1320px;
       height: auto;
@@ -665,27 +665,19 @@
       }
     }
 
-    // 新增的覆盖层容器
+    // ===== 覆盖层容器 =====
     .overlay-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      padding: 4%; // 现在可以统一设置padding了
-      box-sizing: border-box;
-      pointer-events: none; // 确保不阻挡图片的交互
 
-      // 允许内部的 up_box 元素接收点击事件
+      // 允许内部元素交互
       .up_box {
         pointer-events: auto;
       }
 
-      // up_box 样式 - 在图片上层
+      // ===== 基础 up_box 样式 =====
       .up_box {
         position: absolute;
 
-        // 共同样式
+        // ===== 标题区域 (G1_Dallas) =====
         &.up_box_1 {
           top: 50px;
           left: 5%;
@@ -702,13 +694,14 @@
           }
         }
 
+        // ===== 地图图片区域 =====
         &.up_box_2 {
           top: 200px;
-          left: 4%;
-          width: auto;
+          left: 4%; // 添加左定位，与 up_box_1 对齐
+          width: auto; // 改为自适应宽度
 
           .image-container {
-            width: 333px;
+            width: 300px;
             height: 250px;
             position: relative;
             border-radius: 10px;
@@ -749,8 +742,9 @@
           }
         }
 
+        // ===== 数据统计卡片 =====
         &.up_box_3 {
-          width: 333px;
+          width: 300px;
           height: 270px;
           top: 460px;
           left: 4%;
@@ -766,10 +760,8 @@
           color: #ffffff;
 
           .aaa {
-            position: absolute;
-            top: 30px;
-            left: 30px;
-            z-index: 2;
+            // 移除绝对定位，使用正常的文档流
+            width: 100%;
 
             .small_title {
               display: flex;
@@ -825,6 +817,7 @@
 }
 
 .box10 {
+  padding: 0 0%;
 
   .hero-content {
     display: flex;
@@ -832,106 +825,121 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: $spacing-lg;
-    overflow: hidden;
-    position: relative;
+    position: relative; // 为覆盖层提供定位参考
     margin: 0 auto;
     width: 100%;
+    overflow: hidden; // 隐藏图片溢出
+    border-radius: 10px;
 
-    .hero-image {
-      width: 1320px;
-      height: auto;
-      margin: 0 auto;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
+    // ===== 图片容器 - 控制溢出 =====
+    .hero-image-container {
+      width: 100%;
+      overflow: hidden;
       border-radius: 10px;
 
-      img {
-        width: 100%;
+      .hero-image {
+        width: 1320px;
         height: auto;
-        display: block;
-        border-radius: 10px;
+        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    // ===== 覆盖层 - 使用自定义栅格 =====
+    .box7_overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 1200px; // 限制覆盖层最大宽度
+      padding: 0 40px;
+      box-sizing: border-box;
+
+      .custom-grid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        // ===== 标题列 =====
+        .title {
+          font-family: "MiSans";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 25px;
+          line-height: 44px;
+          letter-spacing: -0.16px;
+          color: #FFFFFF;
+          text-align: left;
+          margin: 0;
+          letter-spacing: 1px;
+          float: left;
+          margin-bottom: 20px;
+        }
+
+        .submit_email {
+          flex: 0 0 auto;
+          display: flex;
+          align-items: center;
+          background: rgba(63, 63, 63, 0.8);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border-radius: 10px;
+          padding: 0.5rem 0.5rem 0.5rem 1rem;
+          color: #ffffff;
+
+          input {
+            flex: 1;
+            background: none;
+            border: none;
+            color: #FFFFFF;
+            font-family: 'MiSans';
+            font-size: 14px;
+            padding: 10px 0;
+
+            &::placeholder {
+              color: white;
+              letter-spacing: 0.5px;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          button {
+            font-family: 'MiSans';
+            font-style: normal;
+            font-weight: 380;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 0.54px;
+            color: #1D1D1D;
+            background-color: white;
+            padding: 10px 5px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+            margin-left: -12px;
+          }
+        }
       }
     }
   }
-
-  // 覆盖层：居中放置文本和按钮
-  .box7_overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    // background: rgb(203, 44, 44);
-    padding: 40px;
-
-    .title {
-      font-family: 'MiSans';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 48px;
-      line-height: 44px;
-      /* identical to box height, or 122% */
-      letter-spacing: -0.16px;
-      color: #FFFFFF;
-      font-size: 30px;
-      text-align: left;
-      margin-right: 60px;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
-    }
-
-    .submit_email {
-      display: flex;
-      align-items: center;
-      background: rgba(26, 26, 26, 0.8);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 10px;
-      padding: 0.5rem 0.5rem;
-      color: #ffffff;
-
-      input {
-        width: 60%;
-        float: left;
-        margin: 0 15px;
-        background: none;
-        border: none;
-
-
-        &::placeholder {
-          color: white;
-          letter-spacing: 0.5px;
-        }
-
-        &:active,
-        &:focus {
-          outline: none;
-        }
-      }
-
-      button {
-        font-family: 'MiSans';
-        font-style: normal;
-        font-weight: 380;
-        font-size: 14px;
-        line-height: 16px;
-        text-align: center;
-        letter-spacing: 0.54px;
-
-        color: #1D1D1D;
-
-        float: left;
-        width: 30%;
-        background-color: white;
-        padding: 10px;
-        border-radius: 10px;
-      }
-    }
-  }
-
 }
+
 
 // ============================================
 // 6. 页脚区
@@ -1009,43 +1017,59 @@
     }
   }
 
-  .aaa{
+  .aaa {
     padding: 30px 0 60px;
-  }
 
-  .footer-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding-top: 0;
+    .custom-grid {
+      display: flex;
+      flex-direction: column; // 默认垂直排列
 
-    .footer-copyright {
-      text-align: left;
-      width: 100%;
+      @media (min-width: 768px) {
+        flex-direction: row; // 大屏幕水平排列
 
-      p {
-        font-family: 'MiSans';
-        font-style: normal;
-        font-weight: 380;
-        font-size: 12px;
-        line-height: 16px;
-        color: rgba(255, 255, 255, 0.5);
-        margin-bottom: 8px;
+        .custom-col-md-6 {
+          &:first-child {
+            order: 2; // 第一个元素移到第二位
+          }
 
-        &:last-child {
-          margin-bottom: 0;
+          &:last-child {
+            order: 1; // 第二个元素移到第一位
+          }
         }
       }
     }
-  }
 
-  .footer-logo {
-    img {
-      width: 100%;
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding-top: 0;
+
+      .footer-copyright {
+        text-align: left;
+        width: 100%;
+
+        p {
+          font-family: 'MiSans';
+          font-style: normal;
+          font-weight: 380;
+          font-size: 12px;
+          line-height: 16px;
+          color: rgba(255, 255, 255, 0.5);
+          margin-bottom: 8px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+      }
     }
   }
-
 }
 
 
