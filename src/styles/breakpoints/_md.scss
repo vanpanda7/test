@@ -12,9 +12,9 @@
     // max-width: 768px;
   }
 
-  .custom-col {
-    padding: 8px;
-  }
+  // .custom-col {
+  //   padding: 8px;
+  // }
 
 
   .box2 {
@@ -353,6 +353,10 @@
       display: flex;
       align-items: center;
       height: 100%;
+      
+      .custom-col-md-6 {
+        padding: 100px 8px;
+      }
     }
 
     .box8_tag {

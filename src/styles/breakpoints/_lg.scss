@@ -44,6 +44,29 @@
         // 确保在深色背景上文字可读
         color: $color-white;
       }
+
+      .hero-header-nav-toggle {
+        display: block;
+
+        a{
+          margin-right: 15px;
+        }
+        button{
+          padding: 8px 20px;
+          background-color: rgb(86, 86, 86);
+          color: white;
+          border-radius: 10px;
+
+          &:hover{
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+
+      .menu-toggle {
+        display: none;
+      }
     }
 
     .logo {
@@ -256,130 +279,89 @@
   .box9 {
 
     .hero-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      // gap: $spacing-lg;
-      overflow: hidden;
-      position: relative;
-      margin: 0 auto;
-      border-radius: 10px;
-      width: 92%;
+      padding: 0;
 
-      // ===== 背景图片样式 =====
-      .hero-image {
-        width: 1320px;
-        height: auto;
-        margin: 0 auto;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 10px;
+      .custom-grid {
+        display: flex;
 
-        img {
-          width: 100%;
-          height: auto;
+        .claaaa {
           display: block;
-          border-radius: 10px;
+          font-family: "MiSans";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 50px;
+          line-height: 40px;
+          letter-spacing: -0.5px;
+          color: #FFFFFF;
+
+          margin-top: auto;
+          padding-bottom: 50px;
         }
       }
 
-      // ===== 覆盖层容器 =====
       .overlay-container {
 
-        // 允许内部元素交互
-        .up_box {
-          pointer-events: auto;
-        }
+        // 右侧内容列
+        .custom-col-lg-3 {
 
-        // ===== 基础 up_box 样式 =====
-        .up_box {
-          right: 10px;
+          .up_box {
 
-          // ===== 标题区域 (G1_Dallas) =====
-          &.up_box_1 {
-            display: none;
-
-            p {
-              font-family: 'MiSans';
-              font-style: normal;
-              font-weight: 500;
-              font-size: 48px;
-              line-height: 56px;
-              letter-spacing: -0.72px;
-              color: #FFFFFF;
-              margin: 0;
+            // ===== 标题区域 =====
+            &.up_box_1 {
+              display: none;
             }
-          }
 
-          // ===== 地图图片区域 =====
-          &.up_box_2 {
-            top: 10px;
-            left: auto;
-            width: auto; // 改为自适应宽度
+            // ===== 地图图片区域 =====
+            &.up_box_2 {
+              margin-top: 10px;
 
-            .image-container {
-              width: 360px;
-              height: 360px;
-              border-radius: 10px;
-              overflow: hidden;
-
-              img {
+              .image-container {
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
+                height: 250px;
                 border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 0px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  display: block;
+                  border-radius: 10px;
+                }
+              }
+
+              .small_title {
+                display: flex;
+                align-items: center;
+                font-family: 'MiSans';
+                font-style: normal;
+                font-weight: 380;
+                font-size: 13px;
+                line-height: 13px;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                padding: 20px 10px;
+
+                .box6_icon {
+                  height: 6px;
+                  width: 6px;
+                  margin-right: 8px;
+                  background-color: white;
+                  flex-shrink: 0;
+                }
               }
             }
 
-            .small_title {
-              position: absolute;
-              top: 30px;
-              left: 30px;
-              z-index: 2;
-              display: flex;
-              align-items: center;
-              font-family: 'MiSans';
-              font-style: normal;
-              font-weight: 380;
-              font-size: 13px;
-              line-height: 13px;
-              letter-spacing: 0.6px;
-              text-transform: uppercase;
-              color: #FFFFFF;
-
-              .box6_icon {
-                height: 6px;
-                width: 6px;
-                margin-right: 8px;
-                background-color: white;
-                flex-shrink: 0;
-              }
-            }
-          }
-
-          // ===== 数据统计卡片 =====
-          &.up_box_3 {
-            top: 375px;
-            width: 360px;
-            height: 360px;
-            left: auto;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: normal;
-            background: rgba(67, 67, 67, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 10px;
-            padding: 1rem 1.5rem;
-            color: #ffffff;
-
-            .aaa {
-              width: 100%;
+            // ===== 数据统计卡片 =====
+            &.up_box_3 {
+              background: rgba(67, 67, 67, 0.8);
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+              border-radius: 10px;
+              padding: 2rem 1.5rem;
+              color: #ffffff;
 
               .small_title {
                 display: flex;
@@ -392,6 +374,7 @@
                 letter-spacing: 0.6px;
                 text-transform: uppercase;
                 color: #FFFFFF;
+                margin-bottom: 25px;
 
                 .box6_icon {
                   height: 6px;
@@ -403,31 +386,36 @@
               }
 
               .small_card {
-                padding-top: 30px;
                 text-align: left;
                 font-family: 'Boom Sans Display';
                 color: #FFFFFF;
-                position: absolute;
-                bottom: 10px;
 
+                .card_one {
+                  margin-bottom: 20px;
 
-                .card-title {
-                  font-weight: 500;
-                  font-size: 30px;
-                  line-height: 36px;
-                  letter-spacing: -0.07px;
-                  padding-bottom: 15px;
-                }
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
 
-                .card-second {
-                  font-family: 'MiSans';
-                  font-style: normal;
-                  font-weight: 380;
-                  font-size: 10px;
-                  line-height: 14px;
-                  letter-spacing: 0.6px;
-                  text-transform: uppercase;
-                  color: #FFFFFF;
+                  .card-title {
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 30px;
+                    letter-spacing: -0.07px;
+                    margin-bottom: 8px;
+                  }
+
+                  .card-second {
+                    font-family: 'MiSans';
+                    font-style: normal;
+                    font-weight: 380;
+                    font-size: 10px;
+                    line-height: 14px;
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    opacity: 0.9;
+                  }
                 }
               }
             }

@@ -18,12 +18,17 @@
             <div class="logo">
               <img src="static/images/image_logo.png" alt="T1 Energy Logo" />
             </div>
-            <button class="menu-toggle" aria-label="Menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <button class="menu-toggle" aria-label="Menu">
+            <!--  -->
+            <div class="hero-header-nav-toggle">
+              <div class="hero-header-nav">
+                <a href="#">Technology</a>
+                <a href="#">Manufacturing</a>
+                <a href="#">Company</a>
+                <a href="#">Investors</a>
+                <button class="subscribe-btn">Contact</button>
+              </div>
+            </div>
+            <button class="menu-toggle" aria-label="Menu" class="menu-btn">
               <span></span>
               <span></span>
               <span></span>
@@ -257,146 +262,25 @@
               </span>
             </div>
             <el-collapse v-model="activeNames" accordion>
-              <el-collapse-item class="collapse-item" name="1">
+              <el-collapse-item
+                v-for="item in collapseItems"
+                :key="item.name"
+                class="collapse-item"
+                :name="item.name"
+              >
                 <!-- 自定义标题区域 -->
                 <template slot="title">
                   <div class="custom-title">
-                    <span class="title-text">Glass</span>
+                    <span class="title-text">{{ item.title }}</span>
                     <el-button
                       class="circle-btn"
-                      @click.stop="handleButtonClick('1')"
+                      :class="{ rotated: activeNames === item.name }"
+                      @click.stop="handleButtonClick(item.name)"
                     >
-                      +
+                      {{ activeNames === item.name ? '−' : '+' }}
                     </el-button>
                   </div>
                 </template>
-
-                <div>
-                  与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
-                </div>
-                <div>
-                  在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
-                </div>
-              </el-collapse-item>
-              <el-collapse-item class="collapse-item" name="2">
-                <!-- 自定义标题区域 -->
-                <template slot="title">
-                  <div class="custom-title">
-                    <span class="title-text">Aluminum</span>
-                    <el-button
-                      class="circle-btn"
-                      @click.stop="handleButtonClick('2')"
-                    >
-                      +
-                    </el-button>
-                  </div>
-                </template>
-
-                <div>
-                  与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
-                </div>
-                <div>
-                  在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
-                </div>
-              </el-collapse-item>
-              <el-collapse-item class="collapse-item" name="3">
-                <!-- 自定义标题区域 -->
-                <template slot="title">
-                  <div class="custom-title">
-                    <span class="title-text">Silicon</span>
-                    <el-button
-                      class="circle-btn"
-                      @click.stop="handleButtonClick('3')"
-                    >
-                      +
-                    </el-button>
-                  </div>
-                </template>
-
-                <div>
-                  与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
-                </div>
-                <div>
-                  在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
-                </div>
-              </el-collapse-item>
-              <el-collapse-item class="collapse-item" name="4">
-                <!-- 自定义标题区域 -->
-                <template slot="title">
-                  <div class="custom-title">
-                    <span class="title-text">EVA</span>
-                    <el-button
-                      class="circle-btn"
-                      @click.stop="handleButtonClick('4')"
-                    >
-                      +
-                    </el-button>
-                  </div>
-                </template>
-
-                <div>
-                  与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
-                </div>
-                <div>
-                  在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
-                </div>
-              </el-collapse-item>
-              <el-collapse-item class="collapse-item" name="5">
-                <!-- 自定义标题区域 -->
-                <template slot="title">
-                  <div class="custom-title">
-                    <span class="title-text">Rubber</span>
-                    <el-button
-                      class="circle-btn"
-                      @click.stop="handleButtonClick('5')"
-                    >
-                      +
-                    </el-button>
-                  </div>
-                </template>
-
-                <div>
-                  与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
-                </div>
-                <div>
-                  在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
-                </div>
-              </el-collapse-item>
-              <el-collapse-item class="collapse-item" name="6">
-                <!-- 自定义标题区域 -->
-                <template slot="title">
-                  <div class="custom-title">
-                    <span class="title-text">Copper</span>
-                    <el-button
-                      class="circle-btn"
-                      @click.stop="handleButtonClick('6')"
-                    >
-                      +
-                    </el-button>
-                  </div>
-                </template>
-
-                <div>
-                  与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
-                </div>
-                <div>
-                  在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
-                </div>
-              </el-collapse-item>
-              <el-collapse-item class="collapse-item" name="7">
-                <!-- 自定义标题区域 -->
-                <template slot="title">
-                  <div class="custom-title">
-                    <span class="title-text">Silver</span>
-                    <el-button
-                      class="circle-btn"
-                      @click.stop="handleButtonClick('7')"
-                    >
-                      +
-                    </el-button>
-                  </div>
-                </template>
-
                 <div>
                   与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
                 </div>
@@ -410,47 +294,49 @@
       </section>
 
       <section class="box9">
-        <div class="hero-content">
-          <div class="hero-image">
-            <img src="static/images/image-17.png" />
-          </div>
-          <div class="custom-grid overlay-container ">
-            <div class="custom-col-lg-1">
-            </div>
-            <div class="custom-col-lg-1">
-              <p>G1_Dallas</p>
-            </div>
-            <div class="custom-col-lg-7">
-            </div>
-            <div class="custom-col-lg-3">
-              <div class="up_box up_box_1">
+        <div
+          class="hero-content"
+          style="background: url('static/images/image-17.png')"
+        >
+          <div class="overlay-container">
+            <div class="custom-grid">
+              <div class="custom-col-lg-1"></div>
+              <div class="custom-col-lg-1 claaaa">
                 <p>G1_Dallas</p>
               </div>
-              <div class="up_box up_box_2">
-                <div class="image-container">
-                  <img src="static/images/image-18.png" />
+              <div class="custom-col-lg-7"></div>
+              <div class="custom-col-lg-3">
+                <div class="up_box up_box_1">
+                  <p>G1_Dallas</p>
                 </div>
-                <p class="small_title">
-                  <span class="box6_icon"></span>
-                  32.60157°N，-96.70376°W
-                </p>
-              </div>
-              <div class="up_box up_box_3 glass">
-                <div class="aaa">
-                  <p class="small_title">
-                    <span class="box6_icon"></span>
-                    G1_STATS
-                  </p>
-                  <div class="small_card">
-                    <div class="card_one">
-                      <p class="card-title">5GW/year</p>
-                      <p class="card-second">
-                        SOLAR MODULE PRODUCTION CAPACITY
-                      </p>
-                    </div>
-                    <div class="card_one">
-                      <p class="card-title">12,000/day</p>
-                      <p class="card-second">AVG PANEL PRODUCED</p>
+                <div class="up_box up_box_2">
+                  <div
+                    class="image-container"
+                    style="background-image: url('static/images/image-18.png')"
+                  >
+                    <p class="small_title">
+                      <span class="box6_icon"></span>
+                      32.60157°N，-96.70376°W
+                    </p>
+                  </div>
+                </div>
+                <div class="up_box up_box_3 glass">
+                  <div class="aaa">
+                    <p class="small_title">
+                      <span class="box6_icon"></span>
+                      G1_STATS
+                    </p>
+                    <div class="small_card">
+                      <div class="card_one">
+                        <p class="card-title">5GW/year</p>
+                        <p class="card-second">
+                          SOLAR MODULE PRODUCTION CAPACITY
+                        </p>
+                      </div>
+                      <div class="card_one">
+                        <p class="card-title">12,000/day</p>
+                        <p class="card-second">AVG PANEL PRODUCED</p>
+                      </div>
                     </div>
                   </div>
                 </div>

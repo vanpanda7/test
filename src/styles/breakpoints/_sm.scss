@@ -7,43 +7,5 @@
 // 使用：@include media-breakpoint-up(sm) { ... }
 
 @include media-breakpoint-up(sm) {
-
-  .box9 {
-    .hero-content {
-      .overlay-container {
-        padding: 2%;
-
-        .up_box {
-          &.up_box_1 {
-            top: 100px;
-            left: 5%;
-
-            p {
-              font-size: 36px;
-              line-height: 42px;
-            }
-          }
-
-          &.up_box_2,
-          &.up_box_3 {
-            width: 96%;
-            left: 2%;
-
-            .image-container {
-              width: 100%;
-            }
-          }
-
-          &.up_box_2 {
-            top: 200px;
-          }
-
-          &.up_box_3 {
-            top: 460px;
-          }
-        }
-      }
-    }
-  }
   
 }
