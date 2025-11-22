@@ -938,72 +938,106 @@
 // ============================================
 .site-footer {
   background-color: $color-black;
-  padding: $spacing-xl $spacing-md;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 0; // 与工厂信息区无缝衔接
-}
+  padding: 60px 4% 40px;
+  width: 100%;
+  margin-top: 0;
 
-.footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: $spacing-lg;
-  margin-bottom: $spacing-xl;
-}
-
-.footer-column {
-  .footer-title {
-    font-size: $font-size-sm;
-    font-weight: 600;
-    color: $color-white;
-    margin-bottom: $spacing-sm;
-    letter-spacing: 1px;
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-}
 
-.footer-links {
-  li {
-    margin-bottom: $spacing-xs;
+  .footer-column {
+    .footer-title {
+      font-family: 'MiSans';
+      font-style: normal;
+      font-weight: 380;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+  }
 
-    a {
-      font-size: $font-size-sm;
-      color: $color-light-gray;
-      transition: color 0.3s ease;
+  .footer-links {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
 
-      &:hover {
-        color: $color-white;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .link-number {
+        font-family: 'MiSans';
+        font-style: normal;
+        font-weight: 380;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.6);
+        flex-shrink: 0;
+      }
+
+      a {
+        font-family: 'MiSans';
+        font-style: normal;
+        font-weight: 380;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: inline-block;
+
+        &:hover {
+          color: #FFFFFF;
+        }
       }
     }
   }
-}
 
-.footer-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: $spacing-md;
-  padding-top: $spacing-lg;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 0;
+  }
 
-.footer-copyright {
-  text-align: center;
+  .footer-copyright {
+    text-align: center;
+    width: 100%;
 
-  p {
-    font-size: $font-size-xs;
-    color: $color-light-gray;
-    margin-bottom: $spacing-xs;
+    p {
+      font-family: 'MiSans';
+      font-style: normal;
+      font-weight: 380;
+      font-size: 12px;
+      line-height: 16px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 8px;
 
-    &:last-child {
-      margin-bottom: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
-}
 
-.footer-logo {
-  img {
-    height: 24px;
-    width: auto;
-    opacity: 0.8;
+  .footer-logo {
+    img {
+      height: 28px;
+      width: auto;
+      opacity: 0.9;
+      display: block;
+    }
   }
 }
 
