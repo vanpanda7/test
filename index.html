@@ -16,7 +16,7 @@
         <header class="hero-header">
           <div class="hero-header-content">
             <div class="logo">
-              <img src="static/images/logo.png" alt="T1 Energy Logo" />
+              <img src="static/images/image_logo.png" alt="T1 Energy Logo" />
             </div>
             <button class="menu-toggle" aria-label="Menu">
               <span></span>
@@ -27,12 +27,14 @@
         </header>
 
         <!-- 中部内容 -->
-        <div class="hero-content padding-4">
-          <div class="hero-image">
-            <img src="static/images/image-1.png" alt="Solar Panel 3D Render" />
+        <div class="box1">
+          <div class="hero-content padding-4">
+            <div class="hero-image">
+              <img src="static/images/image-1.png" alt="Solar Panel 3D Render" />
+            </div>
+            <h1 class="hero-title">Industry Leading TOPCon Solar</h1>
+            <button class="discover-btn">Discover</button>
           </div>
-          <h1 class="hero-title">Industry Leading TOPCon Solar</h1>
-          <button class="discover-btn">Discover</button>
         </div>
       </section>
 
@@ -215,8 +217,11 @@
 
       <section class="box8 padding-4">
         <div class="custom-grid">
-          <div class="custom-col">
-            <img src="static/images/image-10.png" alt="" />
+          <div class="custom-col tucen">
+            <!-- 移除 mode="out-in"，使用默认模式 -->
+            <transition name="fade">
+              <img :key="box8_img" :src="box8_img" alt="" class="box8-image" />
+            </transition>
           </div>
           <div class="custom-col">
             <div class="box8_tag">
@@ -381,7 +386,63 @@
           </div>
         </div>
       </section>
-    </div>
+
+      <selection class="box9">
+        <div class="hero-content">
+          <div class="hero-image">
+            <img src="static/images/image-17.png"/>
+          </div>
+          <div class="overlay-container">
+            <div class="up_box up_box_1">
+              <p>G1_Dallas</p>
+            </div>
+            <div class="up_box up_box_2">
+              <div class="image-container">
+                <img src="static/images/image-18.png"/>
+              </div>
+              <p class="small_title">
+                <span class="box6_icon"></span> 
+                32.60157°N，-96.70376°W
+              </p>
+            </div>
+            <div class="up_box up_box_3 glass">
+              <div class="aaa">
+                <p class="small_title">
+                  <span class="box6_icon"></span> 
+                  G1_STATS
+                </p>
+                <div class="small_card">
+                  <div class="card_one">
+                    <p class="card-title">5GW/year</p>
+                    <p class="card-second">SOLAR MODULE PRODUCTION CAPACITY</p>
+                  </div>
+                  <div class="card_one">
+                    <p class="card-title">12,000/day</p>
+                    <p class="card-second">AVG PANEL PRODUCED</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </selection>
+
+      <section class="box10">
+        <div class="hero-content">
+          <div class="hero-image">
+            <img src="static/images/image-19.png"/>
+            <div class="box7_overlay">
+              <p class="title">Join the movement</p>
+              <div class="submit_email">
+                <input class="" type="text" placeholder="Enter your email address" />
+                <button class="box7_icon">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <!-- 6. 页脚区 -->
     <footer class="site-footer">
@@ -413,14 +474,17 @@
           <p>123 Energy Street, Dallas, TX 75201</p>
         </div>
         <div class="footer-logo">
-          <img src="static/images/logo.png" alt="T1 Energy Logo" />
+          <img src="static/images/image_logo.png" alt="T1 Energy Logo" />
         </div>
       </div>
     </footer>
 
     <!-- Bootstrap JavaScript Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/vue.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
     <script src="static/js/element.js"></script>
     <script>
       new Vue({
@@ -428,6 +492,7 @@
         data() {
           return {
             activeNames: "0", // 手风琴模式绑定字符串
+            box8_img: "static/images/image-10.png",
           };
         },
         methods: {
@@ -436,11 +501,23 @@
             if (this.activeNames === name) {
               this.activeNames = "";
             } else {
+              imglist = {
+                1: "static/images/image-10.png",
+                2: "static/images/image-11.png",
+                3: "static/images/image-12.png",
+                4: "static/images/image-13.png",
+                5: "static/images/image-14.png",
+                6: "static/images/image-15.png",
+                7: "static/images/image-16.png",
+              };
               this.activeNames = name;
+              this.box8_img = imglist[name];
             }
           },
         },
       });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
