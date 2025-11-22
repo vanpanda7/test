@@ -13462,6 +13462,9 @@ ul {
   display: block;
   margin-top: -150px;
 }
+.box4 .custom-col {
+  padding: 8px;
+}
 .box4 .utility-card {
   background-color: black;
   color: white;
@@ -14607,9 +14610,6 @@ ul {
   }
 }
 @media (min-width: 1024px) {
-  body {
-    max-width: 1440px;
-  }
   .hero-banner {
     background-color: #000000;
     min-height: 100vh;
@@ -15051,6 +15051,9 @@ ul {
     cursor: pointer;
     white-space: nowrap;
     margin-left: -12px;
+  }
+  .site-footer .footer-content {
+    display: flex;
   }
 }
 

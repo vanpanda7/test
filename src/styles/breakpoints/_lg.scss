@@ -8,7 +8,7 @@
 
 @include media-breakpoint-up(lg) {
   body {
-    max-width: 1440px;
+    // max-width: 1440px;
   }
 
   .hero-banner {
@@ -547,5 +547,9 @@
         }
       }
     }
+  }
+
+  .site-footer .footer-content{
+    display: flex;
   }
 }
