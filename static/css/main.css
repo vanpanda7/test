@@ -13304,7 +13304,7 @@ ul {
 }
 .box1 .hero-content .hero-title {
   position: absolute;
-  bottom: 120px;
+  bottom: 100px;
   /* 为按钮留出空间 */
   left: 4%;
   /* 偏左位置 */
@@ -13330,7 +13330,7 @@ ul {
 }
 .box1 .hero-content .discover-btn {
   position: absolute;
-  bottom: 6%;
+  bottom: 5%;
   /* 在文字下方30px位置 */
   left: 4%;
   /* 与文字左对齐 */
@@ -14009,63 +14009,93 @@ ul {
 
 .site-footer {
   background-color: #000000;
-  padding: 3rem 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 60px 4% 40px;
+  width: 100%;
   margin-top: 0;
 }
-
-.footer-content {
+.site-footer .footer-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
 }
-
-.footer-column .footer-title {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
+.site-footer .footer-column {
+  margin-bottom: 30px;
 }
-
-.footer-links li {
-  margin-bottom: 0.5rem;
+.site-footer .footer-column .footer-title {
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 380;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 20px;
 }
-.footer-links li a {
-  font-size: 0.875rem;
-  color: #999999;
+.site-footer .footer-links {
+  padding: 0;
+}
+.site-footer .footer-links li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.site-footer .footer-links li:last-child {
+  margin-bottom: 0;
+}
+.site-footer .footer-links li .link-number {
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 380;
+  font-size: 14px;
+  line-height: 20px;
+  color: #858585;
+  flex-shrink: 0;
+  padding-right: 20px;
+  width: 45px;
+}
+.site-footer .footer-links li a {
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 380;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+  text-decoration: none;
   transition: color 0.3s ease;
+  display: inline-block;
 }
-.footer-links li a:hover {
-  color: #ffffff;
+.site-footer .footer-links li a:hover {
+  color: #FFFFFF;
 }
-
-.footer-bottom {
+.site-footer .aaa {
+  padding: 30px 0 60px;
+}
+.site-footer .footer-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 30px;
+  padding-top: 0;
 }
-
-.footer-copyright {
-  text-align: center;
+.site-footer .footer-bottom .footer-copyright {
+  text-align: left;
+  width: 100%;
 }
-.footer-copyright p {
-  font-size: 0.75rem;
-  color: #999999;
-  margin-bottom: 0.5rem;
+.site-footer .footer-bottom .footer-copyright p {
+  font-family: "MiSans";
+  font-style: normal;
+  font-weight: 380;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 8px;
 }
-.footer-copyright p:last-child {
+.site-footer .footer-bottom .footer-copyright p:last-child {
   margin-bottom: 0;
 }
-
-.footer-logo img {
-  height: 24px;
-  width: auto;
-  opacity: 0.8;
+.site-footer .footer-logo img {
+  width: 100%;
 }
 
 .padding-4 {
