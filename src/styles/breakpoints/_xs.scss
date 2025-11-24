@@ -285,7 +285,7 @@ body {
     }
   }
 
-  .custom-col{
+  .custom-col {
     padding: 8px;
   }
 
@@ -688,6 +688,11 @@ body {
     background-size: 100% auto;
     background-position: left top;
     background-repeat: no-repeat;
+
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     border-radius: 12px;
 
